@@ -1,0 +1,20 @@
+{
+  "name": "algorythm-training",
+  "version": "1.0.0",
+  "dependencies": {
+    "typescript": "^4.2.4"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "test",
+    "build": "tsc",
+    "run": "node ./dist/main.js",
+    "execute": "tsc && node ./dist/main.js"
+  },
+  "author": "vasyl chyzh",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "typescript": "^4.2.4"
+  }
+}
