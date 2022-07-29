@@ -1,3 +1,5 @@
 import * as leetCode from './leetcode';
+import * as interview from './interview';
 
-leetCode.leetCode();
+// leetCode.leetCode();
+interview.interviewTasks();
