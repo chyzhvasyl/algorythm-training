@@ -7,7 +7,8 @@ import { isStringReversed } from "./is-string-reversed";
 import { isArraySubset } from "./is-array-subset";
 import { reverseMatrixBy90Deg } from "./reverse-matrix";
 import { isBalanced } from "./is-string-balanced";
-
+import { myBind } from "./custom-bind";
+import { universalSum } from "./universal-sum";
 
 export const interviewTasks = () => {
   logger(hasUniqueCharacters, 'AaBbcCc');
@@ -25,4 +26,16 @@ export const interviewTasks = () => {
   logger(reverseMatrixBy90Deg, [[1,2,3], [4,5,6], [7,8,9]], 4);
 
   logger(isBalanced, '[{]}');
+
+  logger(
+    myBind(function (phone: number, number: number) {
+      // @ts-ignore
+      console.log('this', this);
+      console.log('phone', phone);
+      console.log('number', number);
+      }, { cab: 'context' }, 10000, 23456,
+    )
+  );
+
+  logger(universalSum()()()()()(20)()()(), 22);
 };
