@@ -22,7 +22,7 @@ export const interviewTasks = () => {
 
   logger(isArraySubset, [2, 1, 5,3, 3,4,4,4,4,6,7,10], [1, 2, 3, 3,5,4]);
 
-  logger(reverseMatrixBy90Deg.bind(), [[1,2,3], [4,5,6], [7,8,9]], 4);
+  logger(reverseMatrixBy90Deg, [[1,2,3], [4,5,6], [7,8,9]], 4);
 
   logger(isBalanced, '[{]}');
 };
