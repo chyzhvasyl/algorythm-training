@@ -4,7 +4,7 @@ export const removeDuplicatesInString = (str = '') => {
     const duplicate = result.charAt(i);
     if (i !== result.indexOf(duplicate)) {
       result = result.slice(0, i) + result.slice(i + 1);
-      i--
+      i--;
     }
   }
 
