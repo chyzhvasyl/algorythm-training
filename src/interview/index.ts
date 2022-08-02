@@ -10,6 +10,8 @@ import { isBalanced } from "./is-string-balanced";
 import { myBind } from "./custom-bind";
 import { universalSum } from "./universal-sum";
 
+// TODO: https://vladilen.notion.site/JavaScript-473541d86991472fb844c5fa35d5dbf4
+
 export const interviewTasks = () => {
   logger(hasUniqueCharacters, 'AaBbcCc');
 
