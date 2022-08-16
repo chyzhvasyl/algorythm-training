@@ -72,4 +72,3 @@ export const reverseMatrixBy90Deg = (matrix: number[][] = [], times = 1) => {
 
   return reversedMatrix;
 }
-

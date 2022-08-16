@@ -30,7 +30,7 @@ export const interviewTasks = () => {
   logger(isBalanced, '[{]}');
 
   logger(
-    myBind(function (phone: number, number: number) {
+    myBind((phone: number, number: number) => {
       // @ts-ignore
       console.log('this', this);
       console.log('phone', phone);
