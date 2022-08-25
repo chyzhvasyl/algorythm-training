@@ -9,6 +9,7 @@ import { reverseMatrixBy90Deg } from "./reverse-matrix";
 import { isBalanced } from "./is-string-balanced";
 import { myBind } from "./custom-bind";
 import { universalSum } from "./universal-sum";
+import { findMedian1, findMedian2, tree } from "./find-a-median";
 
 // TODO: https://vladilen.notion.site/JavaScript-473541d86991472fb844c5fa35d5dbf4
 
@@ -40,4 +41,8 @@ export const interviewTasks = () => {
   );
 
   logger(universalSum()()()()()(20)()()(), 22);
+
+  logger(findMedian1, tree);
+
+  logger(findMedian2, tree);
 };
