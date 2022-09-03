@@ -70,3 +70,5 @@ export const maxProfit = (prices: number[]): number | undefined => {
 
   return sumProfit(transactions);
 }
+
+// Accepted.
