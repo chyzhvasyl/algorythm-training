@@ -47,7 +47,7 @@ const areWithinConstraints = (prices: number[]): boolean  => {
   return arePricesInRange(prices) && isPricesLengthValid(prices);
 }
 
-function sumProfit(stocks: number[] = []): number {
+const sumProfit = (stocks: number[] = []): number => {
   return stocks.reduce((prev: number, cur: number) => prev + cur, 0);
 }
 
