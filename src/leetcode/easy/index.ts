@@ -13,9 +13,9 @@ export const main = (): void => {
   // console.log('removeDuplicates', removeDuplicates(removeDuplicatesInput));
   // console.log('---------------------------------------------------------');
 
-  // const maxProfitInput = [7,1,5,3,6,4];
-  // console.log('maxProfitInput', maxProfit(maxProfitInput));
-  // console.log('---------------------------------------------------------');
+  const maxProfitInput = [7,6,4,3,1, 11, 12];
+  console.log('maxProfitInput', maxProfit(maxProfitInput));
+  console.log('---------------------------------------------------------');
 
   // const arr = [1,2,3,4, 5,6, 7];
   // const k = 3;
@@ -61,7 +61,7 @@ export const main = (): void => {
   // console.log('---------------------------------------------------------');
 
 
-  console.log('---------------------------------------------------------');
-  console.log('sumNumbers', sumNumbers(1)(2)(3))
+  // console.log('---------------------------------------------------------');
+  // console.log('sumNumbers', sumNumbers(1)(2)(3))
 }
 

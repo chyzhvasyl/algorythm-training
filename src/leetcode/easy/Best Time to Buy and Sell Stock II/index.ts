@@ -47,49 +47,26 @@ const areWithinConstraints = (prices: number[]): boolean  => {
   return arePricesInRange(prices) && isPricesLengthValid(prices);
 }
 
-const getStockDifference = (currentStock: number, futureStock: number): number => (futureStock - currentStock) > 0 ? (futureStock - currentStock) : 0;
-
-const getDayForProfitableStart = (prices: number[]): number | undefined => {
-  for (let i = 0; prices.length > i; i++) {
-    for (let k = i + 1; prices.length - 1 > k; k++) {
-      if (prices[i] - prices[k] > 0) {
-        return i;
-      }
-    }
-  }
+function sumProfit(stocks: number[] = []): number {
+  return stocks.reduce((prev: number, cur: number) => prev + cur, 0);
 }
 
-
-export const maxProfit = (prices: number[] = []): number | undefined => {
+export const maxProfit = (prices: number[]): number | undefined => {
   if (!areWithinConstraints(prices)) return;
 
-  let profit = 0;
+  const transactions: number[] = [];
 
-  const startDayForStocking = getDayForProfitableStart(prices);
+  for (let i = 0; i < prices.length; i++) {
+    if (i === prices.length - 1) {
+      break;
+    }
 
-  if (startDayForStocking) return profit;
+    const revenue = prices[i + 1] - prices[i];
 
-  const profitsByDay: number[] = [];
+    if (revenue > 0) {
+      transactions.push(revenue);
+    }
+  }
 
-  // const infinitelySetRevenue = (transactions: number[], deepLvl: number = 0): void => {
-  //   const transaction = [];
-  //
-  //   if (!deepLvl) {
-  //     for (let i = 0; transactions.length > i; i++) {
-  //       for (let k = i + 1; transaction.length > k; k++) {
-  //         transaction.push(getStockDifference(transactions[i], transactions[k]));
-  //       }
-  //     }
-  //   } else {
-  //
-  //   }
-  //
-  //   profitsByDay.concat(transaction);
-  //
-  //   infinitelySetRevenue(transaction, deepLvl + 1);
-  // }
-  //
-  // infinitelySetRevenue(prices.splice(startDayForStocking as number))
-
-  return Math.max(...profitsByDay);
+  return sumProfit(transactions);
 }
