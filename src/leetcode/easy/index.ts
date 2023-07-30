@@ -8,6 +8,8 @@ import { twoSum } from "./Two Sum  ";
 import { isValidSudoku } from "./Valid Sudoku";
 import { sumNumbers } from "./sum numbers";
 import { logger } from "../../shared";
+import { climbStairs } from './Climbing Stairs';
+import { fibonacci } from './Fibonacci';
 
 export const main = (): void => {
   logger(removeDuplicates, [1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2]);
@@ -38,5 +40,9 @@ export const main = (): void => {
     ]);
 
   logger(sumNumbers(1)(2), 3);
+
+  logger(fibonacci, 10);
+
+  logger(climbStairs, 10);
 }
 
