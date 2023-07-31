@@ -1,5 +1,5 @@
 import { removeDuplicates } from "./Remove Duplicates from Sorted Array";
-import { maxProfit } from "./Best Time to Buy and Sell Stock II";
+import { maxProfit2 } from "./Best Time to Buy and Sell Stock II";
 import { rotate } from "./Rotate Array";
 import { containsDuplicate } from "./Contains Duplicate  ";
 import { singleNumber } from "./Single Number  ";
@@ -10,11 +10,12 @@ import { sumNumbers } from "./sum numbers";
 import { logger } from "../../shared";
 import { climbStairs } from './Climbing Stairs';
 import { fibonacci } from './Fibonacci';
+import { maxProfit1 } from './Best Time to Buy and Sell Stock';
 
 export const main = (): void => {
   logger(removeDuplicates, [1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2]);
 
-  logger(maxProfit, [7,6,4,3,1, 11, 12]);
+  logger(maxProfit2, [7,6,4,3,1, 11, 12]);
 
   logger(rotate, [1,2,3,4,5,6, 7], 3);
 
@@ -44,5 +45,7 @@ export const main = (): void => {
   logger(fibonacci, 10);
 
   logger(climbStairs, 10);
+
+  logger(maxProfit1, [7,1,5,3,6,4]);
 }
 

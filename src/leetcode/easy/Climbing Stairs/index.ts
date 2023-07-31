@@ -86,6 +86,8 @@ export const climbStairs = (stairsLength: number): number | void => {
   return computeCombinations(combinations);
 };
 
+// Accepted.
+
 // 1 = 1
 
 // 2 = 1 + 1

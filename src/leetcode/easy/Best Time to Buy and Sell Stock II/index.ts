@@ -51,7 +51,7 @@ const sumProfit = (stocks: number[] = []): number => {
   return stocks.reduce((prev: number, cur: number) => prev + cur, 0);
 }
 
-export const maxProfit = (prices: number[]): number | undefined => {
+export const maxProfit2 = (prices: number[]): number | undefined => {
   if (!areWithinConstraints(prices)) return;
 
   const transactions: number[] = [];
