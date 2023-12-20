@@ -32,8 +32,6 @@
 // 1 <= nums[i] <= 105
 // 1 <= k <= 105
 
-import { quickSort } from '../../../shared';
-
 const canAlignPrevious = (diff: number, length: number, portion: number): boolean => {
   return getDiffPortion(diff, length, portion) >= 0;
 };
@@ -43,7 +41,7 @@ const getDiffPortion = (diff: number, length: number, portion: number): number =
 };
 
 export const maxFrequency = (nums: number[], k: number): number => {
-  nums = quickSort(nums);
+  nums.sort((a, b) => a - b);
 
   let combination: number = 0;
 
@@ -79,6 +77,24 @@ export const maxFrequency = (nums: number[], k: number): number => {
   return combination;
 };
 
-//FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaScript heap out of memory
-// Fails only on big data
-// Solution: try Window Sliding Technique;
+// Slide-window technique
+export const maxFrequency2 = (nums: number[], k: number): number => {
+  nums.sort((a, b) => a - b);
+  let maxCount = 0;
+  let left = 0;
+  let sum = 0;
+
+  for (let right = 0; right < nums.length; right++) {
+    sum += nums[right];
+    while (nums[right] * (right - left + 1) > sum + k) {
+      sum -= nums[left];
+      left++;
+    }
+    maxCount = Math.max(maxCount, right - left + 1);
+  }
+
+  return maxCount;
+};
+
+export * from './data';
+// Approved
