@@ -12,6 +12,7 @@ import { climbStairs } from './Climbing Stairs';
 import { fibonacci } from './Fibonacci';
 import { maxProfit1 } from './Best Time to Buy and Sell Stock';
 import { isPowerOfThree } from './Power of Three';
+import { isAnagram } from './Valid Anagram  ';
 
 export const main = (): void => {
   logger(removeDuplicates, [1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2]);
@@ -50,5 +51,7 @@ export const main = (): void => {
   logger(maxProfit1, [7,1,5,3,6,4]);
 
   logger(isPowerOfThree, 27);
+
+  logger(isAnagram, 'rat', 'car');
 }
 
