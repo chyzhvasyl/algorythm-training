@@ -66,3 +66,5 @@ export const strStr = (haystack: string, needle: string): number => {
 
   return resultIndex;
 };
+
+// Accepted

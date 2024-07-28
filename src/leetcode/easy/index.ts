@@ -14,7 +14,8 @@ import { maxProfit1 } from './Best Time to Buy and Sell Stock';
 import { isPowerOfThree } from './Power of Three';
 import { isAnagram } from './Valid Anagram';
 import { longestCommonPrefix } from './Longest Common Prefix';
-import {strStr} from "./Implement strStr()";
+import { strStr } from "./Implement strStr()";
+import { isPalindrome } from "./Valid Palindrome";
 
 export const main = (): void => {
   logger(removeDuplicates, [1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2]);
@@ -59,4 +60,6 @@ export const main = (): void => {
   logger(longestCommonPrefix, ["flower"]);
 
   logger(strStr, 'mississippi', 'issip');
+
+  logger(isPalindrome, ' ');
 }
