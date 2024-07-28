@@ -1,10 +1,10 @@
 import { removeDuplicates } from "./Remove Duplicates from Sorted Array";
 import { maxProfit2 } from "./Best Time to Buy and Sell Stock II";
 import { rotate } from "./Rotate Array";
-import { containsDuplicate } from "./Contains Duplicate  ";
-import { singleNumber } from "./Single Number  ";
+import { containsDuplicate } from "./Contains Duplicate";
+import { singleNumber } from "./Single Number";
 import { intersect } from "./Intersection of Two Arrays II";
-import { twoSum } from "./Two Sum  ";
+import { twoSum } from "./Two Sum";
 import { isValidSudoku } from "./Valid Sudoku";
 import { sumNumbers } from "./sum numbers";
 import { logger } from "../../shared";
@@ -12,8 +12,9 @@ import { climbStairs } from './Climbing Stairs';
 import { fibonacci } from './Fibonacci';
 import { maxProfit1 } from './Best Time to Buy and Sell Stock';
 import { isPowerOfThree } from './Power of Three';
-import { isAnagram } from './Valid Anagram  ';
+import { isAnagram } from './Valid Anagram';
 import { longestCommonPrefix } from './Longest Common Prefix';
+import {strStr} from "./Implement strStr()";
 
 export const main = (): void => {
   logger(removeDuplicates, [1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2]);
@@ -56,5 +57,6 @@ export const main = (): void => {
   logger(isAnagram, 'rat', 'car');
 
   logger(longestCommonPrefix, ["flower"]);
-}
 
+  logger(strStr, 'mississippi', 'issip');
+}

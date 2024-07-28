@@ -1,6 +1,6 @@
 import { logger } from '../../shared';
 import { setZeroes } from './Set Matrix Zeroes';
-import { maxFrequency2, bigList } from './Frequency of the Most Frequent Element ';
+import { maxFrequency2, bigList } from './Frequency of the Most Frequent Element';
 
 
 export const main = (): void => {

@@ -1,9 +1,6 @@
 {
   "name": "algorythm-training",
   "version": "1.0.0",
-  "dependencies": {
-    "typescript": "^4.2.4"
-  },
   "main": "dist/index.js",
   "scripts": {
     "test": "test",
@@ -15,6 +12,6 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "typescript": "^4.2.4"
+    "typescript": "^5.5.4"
   }
 }
