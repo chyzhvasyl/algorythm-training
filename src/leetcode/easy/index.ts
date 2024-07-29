@@ -16,6 +16,7 @@ import { isAnagram } from './Valid Anagram';
 import { longestCommonPrefix } from './Longest Common Prefix';
 import { strStr } from "./Implement strStr()";
 import { isPalindrome } from "./Valid Palindrome";
+import { solution } from "./First Bad Version";
 
 export const main = (): void => {
   logger(removeDuplicates, [1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2]);
@@ -62,4 +63,6 @@ export const main = (): void => {
   logger(strStr, 'mississippi', 'issip');
 
   logger(isPalindrome, ' ');
+
+  logger(solution((n) => n === 4),  7);
 }
