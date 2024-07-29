@@ -64,5 +64,5 @@ export const main = (): void => {
 
   logger(isPalindrome, ' ');
 
-  logger(solution((n) => n === 4),  7);
+  logger(solution((n) => n === 1),  1);
 }

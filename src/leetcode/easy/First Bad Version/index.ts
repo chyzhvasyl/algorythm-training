@@ -28,12 +28,21 @@
 //TODO use binary search
 export const solution = (isBadVersion: (n: number) => boolean): Function => {
   return (version: number): number => {
-    for (let i = version; i > 0; i--) {
-      if (isBadVersion(i)) return i;
+    const fn = (left: number, right: number): number => {
+      if (left === right) return left;
+
+      const mid = Math.floor((left + right) / 2);
+
+      if (isBadVersion(mid)) {
+        return fn(left, mid)
+      } else {
+        return fn(mid + 1, right);
+      }
     }
 
-    return 1;
+    return fn(1, version)
   };
 };
 
+//Accepted
 
