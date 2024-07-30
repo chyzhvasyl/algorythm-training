@@ -18,6 +18,7 @@ import { strStr } from "./Implement strStr()";
 import { isPalindrome } from "./Valid Palindrome";
 import { solution } from "./First Bad Version";
 import {plusOne} from "./Plus One";
+import {moveZeroes} from "./Move Zeroes  ";
 
 export const main = (): void => {
   logger(removeDuplicates, [1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2]);
@@ -68,4 +69,6 @@ export const main = (): void => {
   logger(solution((n) => n === 1),  1);
 
   logger(plusOne, [6,1,4,5,3,9,0,1,9,5,1,8,6,7,0,5,5,4,3]);
+
+  logger(moveZeroes, [0,1,0,3,2]);
 }
