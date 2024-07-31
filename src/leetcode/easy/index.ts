@@ -18,7 +18,9 @@ import { strStr } from "./Implement strStr()";
 import { isPalindrome } from "./Valid Palindrome";
 import { solution } from "./First Bad Version";
 import {plusOne} from "./Plus One";
-import {moveZeroes} from "./Move Zeroes  ";
+import { moveZeroes } from "./Move Zeroes  ";
+import {reverseString} from "./Reverse String";
+import { reverse } from "./Reverse Integer";
 
 export const main = (): void => {
   logger(removeDuplicates, [1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2]);
@@ -71,4 +73,8 @@ export const main = (): void => {
   logger(plusOne, [6,1,4,5,3,9,0,1,9,5,1,8,6,7,0,5,5,4,3]);
 
   logger(moveZeroes, [0,1,0,3,2]);
+
+  logger(reverseString, ["1","2","3", '4','5','6','7','8','9']);
+
+  logger(reverse, 12030000);
 }

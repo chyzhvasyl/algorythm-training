@@ -1,6 +1,13 @@
-export const logger = (func: Function, ...input: unknown[]) => {
+export const logger = (func: Function, ...input: unknown[]): void => {
   console.log('--------------------------------------------------');
   console.log(`${func.name}`);
   console.log(`input: ${JSON.stringify([...input])}`);
-  console.log('result:', func(...input));
+
+  const result = func(...input);
+
+  if (result === undefined) {
+    console.log('result:', ...input);
+  } else {
+    console.log('result:', result);
+  }
 }
