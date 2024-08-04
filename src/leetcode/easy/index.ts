@@ -22,7 +22,8 @@ import { moveZeroes } from "./Move Zeroes  ";
 import {reverseString} from "./Reverse String";
 import { reverse } from "./Reverse Integer";
 import { firstUniqChar } from "./First Unique Character in a String";
-import {romanToInt} from "./Roman to Integer";
+import { romanToInt } from "./Roman to Integer";
+import { countPrimes } from "./Count Primes";
 
 export const main = (): void => {
   logger(removeDuplicates, [1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2]);
@@ -83,4 +84,6 @@ export const main = (): void => {
   logger(firstUniqChar, 'aabb');
 
   logger(romanToInt, 'MCMXCIV');
+
+  logger(countPrimes, 10000);
 }
