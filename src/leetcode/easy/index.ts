@@ -24,6 +24,8 @@ import { reverse } from "./Reverse Integer";
 import { firstUniqChar } from "./First Unique Character in a String";
 import { romanToInt } from "./Roman to Integer";
 import { countPrimes } from "./Count Primes";
+import { maxSubArray } from "./Maximum Subarray";
+import { rob } from "./House Robber";
 
 export const main = (): void => {
   logger(removeDuplicates, [1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2]);
@@ -86,4 +88,9 @@ export const main = (): void => {
   logger(romanToInt, 'MCMXCIV');
 
   logger(countPrimes, 10000);
+
+  logger(maxSubArray, [-2,1]);
+
+  logger(rob, [8,2,8,9,2]
+  );
 }
