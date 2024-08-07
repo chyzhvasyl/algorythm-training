@@ -91,6 +91,5 @@ export const main = (): void => {
 
   logger(maxSubArray, [-2,1]);
 
-  logger(rob, [8,2,8,9,2]
-  );
+  logger(rob, [8,2,8,9,2]);
 }
