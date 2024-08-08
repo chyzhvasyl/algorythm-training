@@ -3,7 +3,7 @@ import * as medium from "./medium";
 import * as hard from "./hard";
 
 export const leetCode = (): void => {
-  // easy.main();
+  easy.main();
   // medium.main();
-  hard.main();
+  // hard.main();
 }

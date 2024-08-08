@@ -26,6 +26,7 @@ import { romanToInt } from "./Roman to Integer";
 import { countPrimes } from "./Count Primes";
 import { maxSubArray } from "./Maximum Subarray";
 import { rob } from "./House Robber";
+import {findWords} from "./Keyboard Row";
 
 export const main = (): void => {
   logger(removeDuplicates, [1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2]);
@@ -92,4 +93,6 @@ export const main = (): void => {
   logger(maxSubArray, [-2,1]);
 
   logger(rob, [8,2,8,9,2]);
+
+  logger(findWords, ["Hello","Alaska","Dad","Peace"]);
 }
