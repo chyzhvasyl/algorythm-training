@@ -19,15 +19,16 @@ import { isPalindrome } from "./Valid Palindrome";
 import { solution } from "./First Bad Version";
 import { plusOne } from "./Plus One";
 import { moveZeroes } from "./Move Zeroes  ";
-import {reverseString} from "./Reverse String";
+import { reverseString } from "./Reverse String";
 import { reverse } from "./Reverse Integer";
 import { firstUniqChar } from "./First Unique Character in a String";
 import { romanToInt } from "./Roman to Integer";
 import { countPrimes } from "./Count Primes";
 import { maxSubArray } from "./Maximum Subarray";
 import { rob } from "./House Robber";
-import {findWords} from "./Keyboard Row";
+import { findWords } from "./Keyboard Row";
 import { deleteNode } from "./Delete Node in a Linked List";
+import { removeNthFromEnd, removeNthFromEndInput } from "./Remove Nth Node From End of List";
 
 export const main = (): void => {
   logger(removeDuplicates, [1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2]);
@@ -97,5 +98,7 @@ export const main = (): void => {
 
   logger(findWords, ["Hello","Alaska","Dad","Peace"]);
 
-  logger(deleteNode)
+  logger(deleteNode);
+
+  logger(removeNthFromEnd, removeNthFromEndInput, 1);
 }

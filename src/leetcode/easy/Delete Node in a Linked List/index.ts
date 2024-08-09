@@ -38,15 +38,7 @@
 // The value of each node in the list is unique.
 // The node to be deleted is in the list and is not a tail node.
 
-class ListNode {
-  val: number
-  next: ListNode | null
-
-  constructor(val?: number, next?: ListNode | null) {
-    this.val = (val===undefined ? 0 : val)
-    this.next = (next===undefined ? null : next)
-  }
-}
+import {ListNode} from "../../../shared";
 
 const head = new ListNode(4);
 head.next = new ListNode(5);
