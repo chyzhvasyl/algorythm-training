@@ -27,6 +27,7 @@ import { countPrimes } from "./Count Primes";
 import { maxSubArray } from "./Maximum Subarray";
 import { rob } from "./House Robber";
 import {findWords} from "./Keyboard Row";
+import { deleteNode } from "./Delete Node in a Linked List";
 
 export const main = (): void => {
   logger(removeDuplicates, [1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2]);
@@ -95,4 +96,6 @@ export const main = (): void => {
   logger(rob, [8,2,8,9,2]);
 
   logger(findWords, ["Hello","Alaska","Dad","Peace"]);
+
+  logger(deleteNode)
 }
