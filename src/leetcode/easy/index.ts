@@ -29,6 +29,7 @@ import { rob } from "./House Robber";
 import { findWords } from "./Keyboard Row";
 import { deleteNode } from "./Delete Node in a Linked List";
 import { removeNthFromEnd, removeNthFromEndInput } from "./Remove Nth Node From End of List";
+import { reverseList, reverseListInput } from "./Reverse Linked List";
 
 export const main = (): void => {
   logger(removeDuplicates, [1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2]);
@@ -101,4 +102,6 @@ export const main = (): void => {
   logger(deleteNode);
 
   logger(removeNthFromEnd, removeNthFromEndInput, 1);
+
+  logger(reverseList, reverseListInput);
 }
