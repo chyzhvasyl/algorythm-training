@@ -31,6 +31,7 @@ import { deleteNode } from "./Delete Node in a Linked List";
 import { removeNthFromEnd, removeNthFromEndInput } from "./Remove Nth Node From End of List";
 import { reverseList, reverseListInput } from "./Reverse Linked List";
 import { rotate as rotateImage } from "./Rotate Image";
+import {mergeTwoLists, mergeTwoListsInput1, mergeTwoListsInput2} from "./Merge Two Sorted Lists";
 
 export const main = (): void => {
   logger(removeDuplicates, [1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2]);
@@ -107,4 +108,6 @@ export const main = (): void => {
   logger(reverseList, reverseListInput);
 
   logger(rotateImage, [[1,2,3],[4,5,6],[7,8,9]]);
+
+  logger(mergeTwoLists, mergeTwoListsInput1, mergeTwoListsInput2);
 }
