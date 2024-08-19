@@ -32,6 +32,8 @@ import { removeNthFromEnd, removeNthFromEndInput } from "./Remove Nth Node From 
 import { reverseList, reverseListInput } from "./Reverse Linked List";
 import { rotate as rotateImage } from "./Rotate Image";
 import {mergeTwoLists, mergeTwoListsInput1, mergeTwoListsInput2} from "./Merge Two Sorted Lists";
+import {isPalindromeList} from "./Palindrome Linked List";
+import {isPalindrome as isPalindromeLinkedList} from "./Palindrome Linked List";
 
 export const main = (): void => {
   logger(removeDuplicates, [1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2]);
@@ -110,4 +112,6 @@ export const main = (): void => {
   logger(rotateImage, [[1,2,3],[4,5,6],[7,8,9]]);
 
   logger(mergeTwoLists, mergeTwoListsInput1, mergeTwoListsInput2);
+
+  logger(isPalindromeLinkedList, isPalindromeList);
 }
