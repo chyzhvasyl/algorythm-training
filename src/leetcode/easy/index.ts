@@ -34,6 +34,7 @@ import { rotate as rotateImage } from "./Rotate Image";
 import {mergeTwoLists, mergeTwoListsInput1, mergeTwoListsInput2} from "./Merge Two Sorted Lists";
 import {isPalindromeList} from "./Palindrome Linked List";
 import {isPalindrome as isPalindromeLinkedList} from "./Palindrome Linked List";
+import {removeElements, removeElementsLinkedList} from "./Remove Linked List Elements";
 
 export const main = (): void => {
   logger(removeDuplicates, [1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2]);
@@ -114,4 +115,6 @@ export const main = (): void => {
   logger(mergeTwoLists, mergeTwoListsInput1, mergeTwoListsInput2);
 
   logger(isPalindromeLinkedList, isPalindromeList);
+
+  console.log('removeElements', removeElements(removeElementsLinkedList, 1))
 }
