@@ -2,6 +2,7 @@ import { logger } from '../../shared';
 import { setZeroes } from './Set Matrix Zeroes';
 import { maxFrequency2 } from './Frequency of the Most Frequent Element';
 import { getMyLinkedList } from "./Design Linked List";
+import { getMyLinkedList2 } from "./Doubly Linked List";
 import { cycledLinkedList, hasCycle } from "./Linked List Cycle";
 import {cycledLinkedList2, detectCycle} from "./Linked List Cycle 2";
 import {getIntersectionNode} from "./Intersection of Two Linked Lists";
@@ -22,4 +23,6 @@ export const main = (): void => {
   // console.log('getIntersectionNode---', getIntersectionNode(cycledLinkedList, cycledLinkedList2));
 
   logger(spiralOrder, [[1,2,3], [4,5,6]]);
+
+  console.log('getMyLinkedList2', getMyLinkedList2())
 }
