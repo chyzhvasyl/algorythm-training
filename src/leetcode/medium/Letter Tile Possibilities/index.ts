@@ -32,6 +32,19 @@ const getFactorial = (n: number, cache: number[] = []): number => {
   return cache[n] = getFactorial(n - 1) * n;
 }
 
+const getSubSum = (length: number, table: Record<string, number>): number => {
+  let sum = 0;
+
+  for (const [key, value] of Object.entries(table)) {
+    // if (table[key] <= length) {
+    //   sum = getFactorial(length)/
+    // }
+  }
+
+  return sum;
+}
+
+
 export const numTilePossibilities = (tiles: string[]): number => {
   const cachedCombinations: number[] = [];
 
@@ -47,7 +60,16 @@ export const numTilePossibilities = (tiles: string[]): number => {
 
   let result = 0;
 
-  for (let i = 1; i <= uniqueTiles; i++ ) {}
+  for (let length = 1; length <= uniqueTiles; length++) {
+    //calculate
+    // length 1
+    // (A - 1 times) + (B 1 times)) = 2 combinations = 1!/(1!⋅0!) + 1!/(0!⋅1!)
+    // length 2
+    // (A - 2 times) + (B 1 times + A 1 times) + (A 1 times, B 1 times) = 2!/(2!⋅0!)=1 + 2!/(1!⋅1!)
+    // ...
+
+    result = getSubSum(length, tilesCount)
+  }
 
 
   return result
