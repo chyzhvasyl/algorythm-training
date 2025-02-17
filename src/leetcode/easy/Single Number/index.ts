@@ -29,10 +29,11 @@ const areWithinConstraints = (nums: number[] = []): boolean => (
   (nums.every((num) => num >= (-3) * Math.pow(10, 4) && num <= 3 * Math.pow(10, 4)))
 );
 
-export const singleNumber = (nums: number[] = []): number | undefined => {
+export const singleNumber = (nums: number[] = []): number | void => {
   if (!areWithinConstraints(nums)) return;
+
   const sorted = nums.sort();
-  console.log(sorted)
+
   for (let i = 0; i < nums.length;) {
     if (sorted[i] !== sorted[i + 1]) {
       return sorted[i]
@@ -40,5 +41,7 @@ export const singleNumber = (nums: number[] = []): number | undefined => {
       i += 2;
     }
   }
+
+  return;
 };
 // approved;

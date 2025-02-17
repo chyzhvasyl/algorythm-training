@@ -5,7 +5,7 @@ import { getMyLinkedList } from "./Design Linked List";
 import { getMyLinkedList2 } from "./Doubly Linked List";
 import { cycledLinkedList, hasCycle } from "./Linked List Cycle";
 import {cycledLinkedList2, detectCycle} from "./Linked List Cycle 2";
-import {getIntersectionNode} from "./Intersection of Two Linked Lists";
+// import {getIntersectionNode} from "./Intersection of Two Linked Lists";
 import {spiralOrder} from "./Spiral Matrix";
 
 

@@ -1,4 +1,4 @@
-type deg = '90' | '180' | '270';
+// type deg = '90' | '180' | '270';
 
 //   [1,2,3]    [7,4,1]
 //   [4,5,6] -> [8,5,2]
@@ -9,7 +9,7 @@ type deg = '90' | '180' | '270';
 export class ReverseMatrix {
   private _reversedMatrix: number[][] = [];
 
-  constructor(private readonly matrix: number[][] = []) {
+  constructor(matrix: number[][] = []) {
     this._reversedMatrix = matrix;
   }
 
