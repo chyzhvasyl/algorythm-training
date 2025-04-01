@@ -36,9 +36,9 @@ const getSubSum = (length: number, table: Record<string, number>): number => {
   let sum = 0;
 
   for (const [key, value] of Object.entries(table)) {
-    // if (table[key] <= length) {
-    //   sum = getFactorial(length)/
-    // }
+    if (value <= length) {
+      // sum =+ getFactorial(length)/
+    }
   }
 
   return sum;

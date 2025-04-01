@@ -1,4 +1,4 @@
-import * as easy from "./easy";
+// import * as easy from "./easy";
 import * as medium from "./medium";
 // import * as hard from "./hard";
 
