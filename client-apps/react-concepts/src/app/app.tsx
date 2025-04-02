@@ -3,10 +3,10 @@ import styles from './app.module.scss';
 import NxWelcome from './nx-welcome';
 
 import { Route, Routes, Link } from 'react-router-dom';
-import {useEffect, useState} from "react";
+import { useEffect, useState } from 'react';
 
 interface Resp {
-  message: string
+  message: string;
 }
 
 export function App() {
@@ -14,19 +14,20 @@ export function App() {
 
   useEffect(() => {
     let getData = async (): Promise<void> => {
-      const resp = await fetch('http://localhost:3000/api').then<Resp>(resp => resp.json());
+      const resp = await fetch('http://localhost:3000/api').then<Resp>((resp) =>
+        resp.json(),
+      );
 
       setData(resp);
     };
 
     getData();
-  }, [])
+  }, []);
 
   return (
     <div>
-      message response: { data?.message }
+      message response: {data?.message}
       <NxWelcome title="react-concepts" />
-
       {/* START: routes */}
       {/* These routes and navigation have been generated for you */}
       {/* Feel free to move and update them to fit your needs */}

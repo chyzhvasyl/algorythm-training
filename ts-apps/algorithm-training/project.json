@@ -1,0 +1,23 @@
+{
+  "name": "algorithm-training",
+  "root": "ts-apps/algorithm-training",
+  "sourceRoot": "ts-apps/algorithm-training/src",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/ts-apps/algorithm-training",
+        "main": "ts-apps/algorithm-training/src/main.ts",
+        "tsConfig": "ts-apps/algorithm-training/tsconfig.app.json",
+        "assets": []
+      }
+    },
+    "start": {
+      "executor": "@nx/js:node",
+      "options": {
+        "buildTarget": "algorithm-training:build"
+      }
+    }
+  }
+}

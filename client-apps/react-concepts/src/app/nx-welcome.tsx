@@ -689,9 +689,7 @@ export function NxWelcome({ title }: { title: string }) {
                 </svg>
                 <span>
                   Install Nx Console for JetBrains
-                  <span>
-                    Available for WebStorm, Intellij IDEA Ultimate and more!
-                  </span>
+                  <span>Available for WebStorm, Intellij IDEA Ultimate and more!</span>
                 </span>
               </a>
               <div id="nx-cloud" className="rounded shadow">
