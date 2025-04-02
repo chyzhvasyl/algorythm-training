@@ -1,3 +1,4 @@
+//TODO: move to a flat configuration
 module.exports = {
   root: true,
   ignorePatterns: [],
@@ -10,9 +11,10 @@ module.exports = {
     'import',
   ],
   extends: [
-    'airbnb',
-    'airbnb-typescript',
-    'airbnb/hooks',
+    // 'airbnb',
+    // 'airbnb-typescript',
+    // 'airbnb/hooks',
+    // use @typescript-eslint/eslint-plugin@7.x @typescript-eslint/parser@7.x
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
   ],

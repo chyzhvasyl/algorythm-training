@@ -24,9 +24,12 @@
 // 1 <= prices.length <= 105
 // 0 <= prices[i] <= 104
 
-const arePricesInRange = (prices: number[]): boolean => prices.every((price) => price <= 10**4 && price >= 0);
-const isPricesLengthValid = (prices: number[]): boolean => prices.length >= 1 && prices.length <= 10**5;
-const isValid = (prices: number[]): boolean => arePricesInRange(prices) && isPricesLengthValid(prices);
+const arePricesInRange = (prices: number[]): boolean =>
+  prices.every((price) => price <= 10 ** 4 && price >= 0);
+const isPricesLengthValid = (prices: number[]): boolean =>
+  prices.length >= 1 && prices.length <= 10 ** 5;
+const isValid = (prices: number[]): boolean =>
+  arePricesInRange(prices) && isPricesLengthValid(prices);
 
 export const maxProfit1 = (prices: number[]): number | undefined => {
   if (!isValid(prices)) return;

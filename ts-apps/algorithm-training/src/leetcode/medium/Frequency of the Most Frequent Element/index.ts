@@ -32,8 +32,10 @@
 // 1 <= nums[i] <= 105
 // 1 <= k <= 105
 
-const canAlignPrevious = (diff: number, length: number, portion: number): boolean => getDiffPortion(diff, length, portion) >= 0;
-const getDiffPortion = (diff: number, length: number, portion: number): number => portion - diff * length;
+const canAlignPrevious = (diff: number, length: number, portion: number): boolean =>
+  getDiffPortion(diff, length, portion) >= 0;
+const getDiffPortion = (diff: number, length: number, portion: number): number =>
+  portion - diff * length;
 
 export const maxFrequency = (nums: number[], k: number): number => {
   nums.sort((a, b) => a - b);
@@ -50,14 +52,14 @@ export const maxFrequency = (nums: number[], k: number): number => {
   for (let i = 0; i < nums.length - 1; i++) {
     for (let j: number = i; j < nums.length - 1; j++) {
       const _: number = nums[j];
-        const next: number = nums[j + 1];
+      const next: number = nums[j + 1];
       const diffNextAndCurrent: number = next - _;
       const leftLength: number = j - i;
       const portion: number = count - diffNextAndCurrent;
 
       if (
-        diffNextAndCurrent <= count
-        && canAlignPrevious(diffNextAndCurrent, leftLength, portion)
+        diffNextAndCurrent <= count &&
+        canAlignPrevious(diffNextAndCurrent, leftLength, portion)
       ) {
         result++;
         count = getDiffPortion(diffNextAndCurrent, leftLength, portion);

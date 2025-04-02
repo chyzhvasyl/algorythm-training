@@ -35,10 +35,14 @@
 // 0 day: 7-7 = 0
 // 1 day:
 
-const arePricesInRange = (prices: number[]): boolean => prices.every((price) => price <= 10**4 && price >= 0);
-const isPricesLengthValid = (prices: number[]): boolean => prices.length >= 1 && prices.length <= 3 * 10**4;
-const areWithinConstraints = (prices: number[]): boolean => arePricesInRange(prices) && isPricesLengthValid(prices);
-const sumProfit = (stocks: number[] = []): number => stocks.reduce((prev: number, cur: number) => prev + cur, 0);
+const arePricesInRange = (prices: number[]): boolean =>
+  prices.every((price) => price <= 10 ** 4 && price >= 0);
+const isPricesLengthValid = (prices: number[]): boolean =>
+  prices.length >= 1 && prices.length <= 3 * 10 ** 4;
+const areWithinConstraints = (prices: number[]): boolean =>
+  arePricesInRange(prices) && isPricesLengthValid(prices);
+const sumProfit = (stocks: number[] = []): number =>
+  stocks.reduce((prev: number, cur: number) => prev + cur, 0);
 
 export const maxProfit2 = (prices: number[]): number | undefined => {
   if (!areWithinConstraints(prices)) return;

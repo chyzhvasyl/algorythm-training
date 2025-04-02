@@ -19,7 +19,8 @@
 // 1 <= s.length, t.length <= 5 * 104
 // s and t consist of lowercase English letters.
 
-const splitAnagram = (str: string) => str.split('').sort((a: string, b: string) => Number(a > b) - Number(a < b));
+const splitAnagram = (str: string) =>
+  str.split('').sort((a: string, b: string) => Number(a > b) - Number(a < b));
 
 export const isAnagram = (str1: string | string[], str2: string | string[]): boolean => {
   if (str1.length !== str2.length) return false;

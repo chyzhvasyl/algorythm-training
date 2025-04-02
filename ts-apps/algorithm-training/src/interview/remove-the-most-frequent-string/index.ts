@@ -12,7 +12,7 @@ export const removeTheMostFrequentString = (strings: string[] = []): string => {
   let mostFrequentTimes = 1;
   let mostFrequentStrings = '';
 
-  for (const [ key, value ] of Object.entries(stringMap).reverse()) {
+  for (const [key, value] of Object.entries(stringMap).reverse()) {
     if (value >= mostFrequentTimes) {
       mostFrequentTimes = value;
       mostFrequentStrings = key;

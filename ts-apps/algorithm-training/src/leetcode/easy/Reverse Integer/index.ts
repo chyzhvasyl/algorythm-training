@@ -24,7 +24,7 @@
 
 import { reverseString } from '../Reverse String';
 
-const isValid = (x: number) => !(x <= (-2)**31 || x >= 2**31 - 1);
+const isValid = (x: number) => !(x <= (-2) ** 31 || x >= 2 ** 31 - 1);
 
 export const reverse = (x: number): number => {
   if (!isValid(x)) return 0;

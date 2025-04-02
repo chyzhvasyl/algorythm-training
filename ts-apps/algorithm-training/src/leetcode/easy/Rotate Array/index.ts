@@ -25,12 +25,13 @@
 // -231 <= nums[i] <= 231 - 1
 // 0 <= k <= 105
 
-const areWithinConstraints = (nums: number[], k: number): boolean => nums.length > 0
-  && nums.length <= 10**5
-  && nums.some((num) => num >= (-2)**31 && num <= 2**31 - 1)
-  && k > -1
-  && k <= 10**5
-  && (k > nums.length || k < nums.length);
+const areWithinConstraints = (nums: number[], k: number): boolean =>
+  nums.length > 0 &&
+  nums.length <= 10 ** 5 &&
+  nums.some((num) => num >= (-2) ** 31 && num <= 2 ** 31 - 1) &&
+  k > -1 &&
+  k <= 10 ** 5 &&
+  (k > nums.length || k < nums.length);
 
 export const rotate = (nums: number[] = [], k: number): void => {
   if (!areWithinConstraints(nums, k)) return;

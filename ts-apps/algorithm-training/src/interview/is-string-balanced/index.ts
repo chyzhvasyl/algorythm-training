@@ -42,7 +42,7 @@ export const isBalanced = (input = ''): boolean => {
       return false;
     }
 
-      removeBrace();
+    removeBrace();
   }
 
   return isStackEmpty();

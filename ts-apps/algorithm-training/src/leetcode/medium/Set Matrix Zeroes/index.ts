@@ -47,7 +47,8 @@ export const setZeroes = (matrix: number[][]): void => {
   const maxSize = 200;
   const minSize = 1;
 
-  if (!(getColumnsLength(matrix) >= minSize && getColumnsLength(matrix) <= maxSize)) return;
+  if (!(getColumnsLength(matrix) >= minSize && getColumnsLength(matrix) <= maxSize))
+    return;
 
   if (!(getRowsLength(matrix) >= minSize && getRowsLength(matrix) <= maxSize)) return;
 

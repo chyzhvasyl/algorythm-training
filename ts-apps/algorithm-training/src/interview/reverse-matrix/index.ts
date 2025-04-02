@@ -42,7 +42,7 @@ export class ReverseMatrix {
 }
 
 export const reverseMatrixBy90Deg = (matrix: number[][] = [], times = 1) => {
-  let reversedMatrix: number[][] = [ ...matrix ];
+  let reversedMatrix: number[][] = [...matrix];
 
   const reversBy90 = (reversed: number[][] = []) => {
     const _reversedMatrix: number[][] = [];

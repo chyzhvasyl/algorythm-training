@@ -26,7 +26,9 @@
 // 1 <= bad <= n <= 231 - 1
 
 // TODO use binary search
-export const solution = (isBadVersion: (n: number) => boolean): Function => (version: number): number => {
+export const solution =
+  (isBadVersion: (n: number) => boolean): Function =>
+  (version: number): number => {
     const fn = (left: number, right: number): number => {
       if (left === right) return left;
 
@@ -36,7 +38,7 @@ export const solution = (isBadVersion: (n: number) => boolean): Function => (ver
         return fn(left, mid);
       }
 
-        return fn(mid + 1, right);
+      return fn(mid + 1, right);
     };
 
     return fn(1, version);

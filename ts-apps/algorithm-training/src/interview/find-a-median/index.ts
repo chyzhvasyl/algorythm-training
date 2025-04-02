@@ -42,7 +42,7 @@ function flattenTreeValues(prev: number[], current: Tree): number[] {
     return prev;
   }
 
-    return current.children.reduce(flattenTreeValues, prev);
+  return current.children.reduce(flattenTreeValues, prev);
 }
 
 function getFlattedValues(tree: Tree): number[] {

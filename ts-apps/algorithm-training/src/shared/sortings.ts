@@ -16,5 +16,5 @@ export const quickSort = (arr: number[]): number[] => {
     }
   }
 
-  return [ ...quickSort(less), pivot, ...quickSort(greater) ];
+  return [...quickSort(less), pivot, ...quickSort(greater)];
 };

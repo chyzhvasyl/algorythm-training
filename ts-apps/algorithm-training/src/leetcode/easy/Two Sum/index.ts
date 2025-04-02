@@ -31,20 +31,21 @@
 //
 // Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
 
-const areWithinConstraints = (nums: number[] = [], target: number): boolean => nums.length > 1
-  && nums.length <= 10**4
-  && nums.every((num) => num >= (-10)**9 && num <= 10**9)
-  && target >= (-10)**9
-  && target <= 10**9;
+const areWithinConstraints = (nums: number[] = [], target: number): boolean =>
+  nums.length > 1 &&
+  nums.length <= 10 ** 4 &&
+  nums.every((num) => num >= (-10) ** 9 && num <= 10 ** 9) &&
+  target >= (-10) ** 9 &&
+  target <= 10 ** 9;
 
 export const twoSum = (nums: number[], target: number): number[] | undefined => {
   if (!areWithinConstraints(nums, target)) return;
 
-  for (const [ aIndex, num ] of Object.entries(nums)) {
+  for (const [aIndex, num] of Object.entries(nums)) {
     const bIndex = nums.findIndex((n: number) => num + n === target);
 
     if (bIndex > -1 && Number(aIndex) !== bIndex) {
-      return [ Number(aIndex), bIndex ];
+      return [Number(aIndex), bIndex];
     }
   }
 

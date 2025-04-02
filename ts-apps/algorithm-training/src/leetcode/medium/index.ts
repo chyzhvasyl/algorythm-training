@@ -10,9 +10,9 @@ import { setZeroes } from './Set Matrix Zeroes';
 import { spiralOrder } from './Spiral Matrix';
 
 export const main = (): void => {
-  logger(setZeroes, [[ 0, 1 ]]);
+  logger(setZeroes, [[0, 1]]);
 
-  logger(maxFrequency2, [ 1, 2, 3 ], 1);
+  logger(maxFrequency2, [1, 2, 3], 1);
 
   logger(getMyLinkedList);
 
@@ -23,8 +23,8 @@ export const main = (): void => {
   // console.log('getIntersectionNode---', getIntersectionNode(cycledLinkedList, cycledLinkedList2));
 
   logger(spiralOrder, [
-    [ 1, 2, 3 ],
-    [ 4, 5, 6 ],
+    [1, 2, 3],
+    [4, 5, 6],
   ]);
 
   console.log('getMyLinkedList2', getMyLinkedList2());

@@ -36,7 +36,7 @@ const getSubSum = (length: number, table: Record<string, number>): number => {
   const sum = 0;
 
   // @ts-ignore
-  for (const [ key, value ] of Object.entries(table)) {
+  for (const [key, value] of Object.entries(table)) {
     if (value <= length) {
       // sum =+ getFactorial(length)/
     }
@@ -51,10 +51,13 @@ export const numTilePossibilities = (tiles: string[]): number => {
   // @ts-ignore
   const allReplacent = getFactorial(allTiles, cachedCombinations);
 
-  const tilesCount = tiles.reduce<Record<string, number>>((prev, curr: string) => ({
+  const tilesCount = tiles.reduce<Record<string, number>>(
+    (prev, curr: string) => ({
       ...prev,
       curr: prev[curr] ? prev[curr] + 1 : 1,
-    }), {});
+    }),
+    {},
+  );
 
   const uniqueTiles = Object.keys(tiles).length;
   let result = 0;

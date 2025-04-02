@@ -18,24 +18,24 @@ export const interviewTasks = () => {
   logger(hasUniqueCharacters, 'AaBbcCc');
 
   logger(flattenArray, [
-    [ 1, 2, 3 ],
-    [ 4, 5, 6, [ 7, 8, 9 ], 10, 11, [[[ 12 ]]]],
+    [1, 2, 3],
+    [4, 5, 6, [7, 8, 9], 10, 11, [[[12]]]],
   ]);
 
   logger(removeDuplicatesInString, 'abccccccccaaaaaaaa2fgrrtrtbcxx');
 
-  logger(removeTheMostFrequentString, [ 'frt', 'jopa' ]);
+  logger(removeTheMostFrequentString, ['frt', 'jopa']);
 
   logger(isStringReversed, 'abcde', 'ecdba');
 
-  logger(isArraySubset, [ 2, 1, 5, 3, 3, 4, 4, 4, 4, 6, 7, 10 ], [ 1, 2, 3, 3, 5, 4 ]);
+  logger(isArraySubset, [2, 1, 5, 3, 3, 4, 4, 4, 4, 6, 7, 10], [1, 2, 3, 3, 5, 4]);
 
   logger(
     reverseMatrixBy90Deg,
     [
-      [ 1, 2, 3 ],
-      [ 4, 5, 6 ],
-      [ 7, 8, 9 ],
+      [1, 2, 3],
+      [4, 5, 6],
+      [7, 8, 9],
     ],
     4,
   );

@@ -21,7 +21,10 @@ import {
   mergeTwoListsInput2,
 } from './Merge Two Sorted Lists';
 import { moveZeroes } from './Move Zeroes  ';
-import { isPalindrome as isPalindromeLinkedList,isPalindromeList } from './Palindrome Linked List';
+import {
+  isPalindrome as isPalindromeLinkedList,
+  isPalindromeList,
+} from './Palindrome Linked List';
 import { plusOne } from './Plus One';
 import { isPowerOfThree } from './Power of Three';
 import { removeDuplicates } from './Remove Duplicates from Sorted Array';
@@ -44,30 +47,30 @@ import { isPalindrome } from './Valid Palindrome';
 import { isValidSudoku } from './Valid Sudoku';
 
 export const main = (): void => {
-  logger(removeDuplicates, [ 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2 ]);
+  logger(removeDuplicates, [1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2]);
 
-  logger(maxProfit2, [ 7, 6, 4, 3, 1, 11, 12 ]);
+  logger(maxProfit2, [7, 6, 4, 3, 1, 11, 12]);
 
-  logger(rotate, [ 1, 2, 3, 4, 5, 6, 7 ], 3);
+  logger(rotate, [1, 2, 3, 4, 5, 6, 7], 3);
 
-  logger(containsDuplicate, [ 1, 2, 3, 4, 5, 6 ]);
+  logger(containsDuplicate, [1, 2, 3, 4, 5, 6]);
 
-  logger(singleNumber, [ 1 ]);
+  logger(singleNumber, [1]);
 
-  logger(intersect, [ 1, 2, 2, 1 ], [ 2, 2 ]);
+  logger(intersect, [1, 2, 2, 1], [2, 2]);
 
-  logger(twoSum, [ 3, 3 ], 6);
+  logger(twoSum, [3, 3], 6);
 
   logger(isValidSudoku, [
-    [ '5', '3', '.', '.', '7', '.', '.', '.', '.' ],
-    [ '6', '.', '.', '1', '9', '5', '.', '.', '.' ],
-    [ '.', '9', '8', '.', '.', '.', '.', '6', '.' ],
-    [ '8', '.', '.', '.', '6', '.', '.', '.', '3' ],
-    [ '4', '.', '.', '8', '.', '3', '.', '.', '1' ],
-    [ '7', '.', '.', '.', '2', '.', '.', '.', '6' ],
-    [ '.', '6', '.', '.', '.', '.', '2', '8', '.' ],
-    [ '.', '.', '.', '4', '1', '9', '.', '.', '5' ],
-    [ '.', '.', '.', '.', '8', '.', '.', '7', '9' ],
+    ['5', '3', '.', '.', '7', '.', '.', '.', '.'],
+    ['6', '.', '.', '1', '9', '5', '.', '.', '.'],
+    ['.', '9', '8', '.', '.', '.', '.', '6', '.'],
+    ['8', '.', '.', '.', '6', '.', '.', '.', '3'],
+    ['4', '.', '.', '8', '.', '3', '.', '.', '1'],
+    ['7', '.', '.', '.', '2', '.', '.', '.', '6'],
+    ['.', '6', '.', '.', '.', '.', '2', '8', '.'],
+    ['.', '.', '.', '4', '1', '9', '.', '.', '5'],
+    ['.', '.', '.', '.', '8', '.', '.', '7', '9'],
   ]);
 
   logger(sumNumbers(1)(2), 3);
@@ -76,13 +79,13 @@ export const main = (): void => {
 
   logger(climbStairs, 10);
 
-  logger(maxProfit1, [ 7, 1, 5, 3, 6, 4 ]);
+  logger(maxProfit1, [7, 1, 5, 3, 6, 4]);
 
   logger(isPowerOfThree, 27);
 
   logger(isAnagram, 'rat', 'car');
 
-  logger(longestCommonPrefix, [ 'flower' ]);
+  logger(longestCommonPrefix, ['flower']);
 
   logger(strStr, 'mississippi', 'issip');
 
@@ -93,11 +96,11 @@ export const main = (): void => {
     1,
   );
 
-  logger(plusOne, [ 6, 1, 4, 5, 3, 9, 0, 1, 9, 5, 1, 8, 6, 7, 0, 5, 5, 4, 3 ]);
+  logger(plusOne, [6, 1, 4, 5, 3, 9, 0, 1, 9, 5, 1, 8, 6, 7, 0, 5, 5, 4, 3]);
 
-  logger(moveZeroes, [ 0, 1, 0, 3, 2 ]);
+  logger(moveZeroes, [0, 1, 0, 3, 2]);
 
-  logger(reverseString, [ '1', '2', '3', '4', '5', '6', '7', '8', '9' ]);
+  logger(reverseString, ['1', '2', '3', '4', '5', '6', '7', '8', '9']);
 
   logger(reverse, 12030000);
 
@@ -107,11 +110,11 @@ export const main = (): void => {
 
   logger(countPrimes, 10000);
 
-  logger(maxSubArray, [ -2, 1 ]);
+  logger(maxSubArray, [-2, 1]);
 
-  logger(rob, [ 8, 2, 8, 9, 2 ]);
+  logger(rob, [8, 2, 8, 9, 2]);
 
-  logger(findWords, [ 'Hello', 'Alaska', 'Dad', 'Peace' ]);
+  logger(findWords, ['Hello', 'Alaska', 'Dad', 'Peace']);
 
   logger(deleteNode);
 
@@ -120,9 +123,9 @@ export const main = (): void => {
   logger(reverseList, reverseListInput);
 
   logger(rotateImage, [
-    [ 1, 2, 3 ],
-    [ 4, 5, 6 ],
-    [ 7, 8, 9 ],
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
   ]);
 
   logger(mergeTwoLists, mergeTwoListsInput1, mergeTwoListsInput2);

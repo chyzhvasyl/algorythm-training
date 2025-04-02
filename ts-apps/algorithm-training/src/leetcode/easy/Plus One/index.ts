@@ -34,7 +34,10 @@
 // digits does not contain any leading 0's.
 
 export const plusOne = (digits: number[]): number[] => {
-  const str = digits.reduce((prev: string, currentValue) => prev.concat(currentValue.toString(10)), '');
+  const str = digits.reduce(
+    (prev: string, currentValue) => prev.concat(currentValue.toString(10)),
+    '',
+  );
   const num = BigInt(str) + BigInt(1);
 
   return num.toString().split('').map(Number);

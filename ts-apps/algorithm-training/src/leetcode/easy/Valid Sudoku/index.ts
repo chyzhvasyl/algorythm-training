@@ -54,22 +54,25 @@ const BOX_SIZE = 3;
 
 // ================================================================
 
-const isSudokuItemValid = (item: string): boolean => item === EMPTY_VALUE
-  || (Number(item) >= Number(MIN_NUMBER) && Number(item) <= Number(MAX_NUMBER));
+const isSudokuItemValid = (item: string): boolean =>
+  item === EMPTY_VALUE ||
+  (Number(item) >= Number(MIN_NUMBER) && Number(item) <= Number(MAX_NUMBER));
 
-const areSudokuItemsValid = (board: string[][] = []): boolean => board.every((row: string[]) => row.every((item: string) => isSudokuItemValid(item)));
+const areSudokuItemsValid = (board: string[][] = []): boolean =>
+  board.every((row: string[]) => row.every((item: string) => isSudokuItemValid(item)));
 
-const isSudokuBoardSize = (board: string[][] = []): boolean => (
-    board.length === BOARD_DIMENSION
-    && board.every((row: string[]) => row.length === BOARD_DIMENSION)
-  );
+const isSudokuBoardSize = (board: string[][] = []): boolean =>
+  board.length === BOARD_DIMENSION &&
+  board.every((row: string[]) => row.length === BOARD_DIMENSION);
 
-const isSudokuBoard = (board: string[][] = []): boolean => isSudokuBoardSize(board) && areSudokuItemsValid(board);
+const isSudokuBoard = (board: string[][] = []): boolean =>
+  isSudokuBoardSize(board) && areSudokuItemsValid(board);
 
 // ================================================================
 
 const getRowByIndex = (board: string[][] = [], i: number): string[] => board[i];
-const getColumnByIndex = (board: string[][] = [], i: number): string[] => board.map((row: string[]) => row[i]);
+const getColumnByIndex = (board: string[][] = [], i: number): string[] =>
+  board.map((row: string[]) => row[i]);
 
 const getBoxByIndex = (board: string[][] = [], sectorIndex: number): string[] => {
   const defineStartingRow = (sectorIndex: number, startingRowIndex = 0): number => {
@@ -77,7 +80,7 @@ const getBoxByIndex = (board: string[][] = [], sectorIndex: number): string[] =>
       return defineStartingRow(sectorIndex - BOX_SIZE, startingRowIndex + 1);
     }
 
-      return startingRowIndex;
+    return startingRowIndex;
   };
 
   const defineStartingColumn = (sectorIndex: number, startingColumnIndex = 0): number => {
@@ -87,7 +90,7 @@ const getBoxByIndex = (board: string[][] = [], sectorIndex: number): string[] =>
       return BOX_SIZE * sectorIndex;
     }
 
-      return defineStartingColumn(diff, startingColumnIndex + BOX_SIZE);
+    return defineStartingColumn(diff, startingColumnIndex + BOX_SIZE);
   };
 
   const getBoxStartingCoordinates = (row: number, column: number): number[] => [
@@ -100,7 +103,7 @@ const getBoxByIndex = (board: string[][] = [], sectorIndex: number): string[] =>
     startingCoordinates: number[] = [],
   ): string[] => {
     const box: string[] = [];
-    const [ row, column ] = startingCoordinates;
+    const [row, column] = startingCoordinates;
 
     for (let i = 0; i < BOX_SIZE; i++) {
       box.push(...board[row + i].slice(column, column + BOX_SIZE));
@@ -118,14 +121,15 @@ const getBoxByIndex = (board: string[][] = [], sectorIndex: number): string[] =>
   );
 };
 
-const getNumbers = (arr: string[] = []): string[] => arr.filter((item: string) => item !== EMPTY_VALUE);
+const getNumbers = (arr: string[] = []): string[] =>
+  arr.filter((item: string) => item !== EMPTY_VALUE);
 
-const hasDuplicates = (arr: string[] = []): boolean => arr.some(
-    (item: string, index: number, arr: string[]) => index !== arr.indexOf(item),
-  );
+const hasDuplicates = (arr: string[] = []): boolean =>
+  arr.some((item: string, index: number, arr: string[]) => index !== arr.indexOf(item));
 
 const isRowValid = (row: string[] = []): boolean => !hasDuplicates(getNumbers(row));
-const isColumnValid = (column: string[] = []): boolean => !hasDuplicates(getNumbers(column));
+const isColumnValid = (column: string[] = []): boolean =>
+  !hasDuplicates(getNumbers(column));
 const isBoxValid = (box: string[] = []): boolean => !hasDuplicates(getNumbers(box));
 
 export const isValidSudoku = (board: string[][]): boolean => {
@@ -133,9 +137,9 @@ export const isValidSudoku = (board: string[][]): boolean => {
 
   for (let i = 0; i < BOARD_DIMENSION; i++) {
     if (
-      !isRowValid(getRowByIndex(board, i))
-      || !isColumnValid(getColumnByIndex(board, i))
-      || !isBoxValid(getBoxByIndex(board, i))
+      !isRowValid(getRowByIndex(board, i)) ||
+      !isColumnValid(getColumnByIndex(board, i)) ||
+      !isBoxValid(getBoxByIndex(board, i))
     ) {
       return false;
     }

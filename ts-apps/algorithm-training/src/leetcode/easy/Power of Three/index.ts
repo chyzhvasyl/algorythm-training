@@ -28,7 +28,7 @@
 //
 // Follow up: Could you solve it without loops/recursion?
 
-const isValid = (num: number): boolean => num >= (-2)**31 && num <= 2**31 - 1;
+const isValid = (num: number): boolean => num >= (-2) ** 31 && num <= 2 ** 31 - 1;
 
 export const isPowerOfThree = (num: number): boolean | undefined => {
   if (!isValid(num)) return;

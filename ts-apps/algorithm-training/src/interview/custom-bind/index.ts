@@ -1,8 +1,6 @@
-export const myBind = (
-  fn: Function,
-  context: Record<string, any>,
-  ...args: unknown[]
-) => (...rest: unknown[]) => {
+export const myBind =
+  (fn: Function, context: Record<string, any>, ...args: unknown[]) =>
+  (...rest: unknown[]) => {
     const id = Symbol('CONTEXT ID') as unknown as string;
 
     context = {

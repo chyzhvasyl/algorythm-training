@@ -25,13 +25,16 @@
 // What if nums1's size is small compared to nums2's size? Which algorithm is better?
 // What if elements of nums2 are stored on disk, and the memory is limited such that you cannot load all elements into the memory at once?
 
-const isLengthValid = (arr: number[] = []): boolean => arr.length > 0 && arr.length <= 1000;
-const isValueValid = (arr: number[] = []): boolean => arr.every((num: number) => num > -1 && num < 1000);
+const isLengthValid = (arr: number[] = []): boolean =>
+  arr.length > 0 && arr.length <= 1000;
+const isValueValid = (arr: number[] = []): boolean =>
+  arr.every((num: number) => num > -1 && num < 1000);
 
-const areWithinConstraints = (nums1: number[] = [], nums2: number[] = []): boolean => isLengthValid(nums1)
-  && isLengthValid(nums2)
-  && isValueValid(nums1)
-  && isValueValid(nums2);
+const areWithinConstraints = (nums1: number[] = [], nums2: number[] = []): boolean =>
+  isLengthValid(nums1) &&
+  isLengthValid(nums2) &&
+  isValueValid(nums1) &&
+  isValueValid(nums2);
 
 export const intersect = (nums1: number[], nums2: number[]): number[] | void => {
   if (!areWithinConstraints(nums1, nums2)) return;
