@@ -1,4 +1,4 @@
-//You are given the heads of two sorted linked lists list1 and list2.
+// You are given the heads of two sorted linked lists list1 and list2.
 //
 // Merge the two lists into one sorted list. The list should be made by splicing together the nodes of the first two lists.
 //
@@ -46,7 +46,6 @@ export const mergeTwoLists = (
   if (!list1 && !list2) return null;
 
   const nodeValues: number[] = [];
-
   let head1 = list1;
   let head2 = list2;
 
@@ -66,7 +65,7 @@ export const mergeTwoLists = (
     nodeValues.sort((a, b) => a - b);
   }
 
-  let newHead = new ListNode(nodeValues[0]);
+  const newHead = new ListNode(nodeValues[0]);
 
   nodeValues.forEach((nodeValue: number, index: number): void => {
     if (index === 0) return;
@@ -76,8 +75,6 @@ export const mergeTwoLists = (
 
       if (skip === index) {
         node.next = new ListNode(nodeValue);
-
-        return;
       } else {
         return setNextNode(node?.next, skip + 1);
       }
@@ -89,4 +86,4 @@ export const mergeTwoLists = (
   return newHead;
 };
 
-//Accepted
+// Accepted

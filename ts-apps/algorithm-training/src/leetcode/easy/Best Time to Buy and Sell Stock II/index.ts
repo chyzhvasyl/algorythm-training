@@ -1,4 +1,4 @@
-//You are given an array prices where prices[i] is the price of a given stock on the ith day.
+// You are given an array prices where prices[i] is the price of a given stock on the ith day.
 //
 // Find the maximum profit you can achieve. You may complete as many transactions as you like (i.e., buy one and sell one share of the stock multiple times).
 //
@@ -35,21 +35,10 @@
 // 0 day: 7-7 = 0
 // 1 day:
 
-const arePricesInRange = (prices: number[]): boolean => {
-  return prices.every((price) => price <= Math.pow(10, 4) && price >= 0);
-};
-
-const isPricesLengthValid = (prices: number[]): boolean => {
-  return prices.length >= 1 && prices.length <= 3 * Math.pow(10, 4);
-};
-
-const areWithinConstraints = (prices: number[]): boolean => {
-  return arePricesInRange(prices) && isPricesLengthValid(prices);
-};
-
-const sumProfit = (stocks: number[] = []): number => {
-  return stocks.reduce((prev: number, cur: number) => prev + cur, 0);
-};
+const arePricesInRange = (prices: number[]): boolean => prices.every((price) => price <= 10**4 && price >= 0);
+const isPricesLengthValid = (prices: number[]): boolean => prices.length >= 1 && prices.length <= 3 * 10**4;
+const areWithinConstraints = (prices: number[]): boolean => arePricesInRange(prices) && isPricesLengthValid(prices);
+const sumProfit = (stocks: number[] = []): number => stocks.reduce((prev: number, cur: number) => prev + cur, 0);
 
 export const maxProfit2 = (prices: number[]): number | undefined => {
   if (!areWithinConstraints(prices)) return;

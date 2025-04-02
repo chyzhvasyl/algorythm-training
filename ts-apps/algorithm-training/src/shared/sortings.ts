@@ -3,11 +3,10 @@ export const quickSort = (arr: number[]): number[] => {
 
   const pivotIndex: number = Math.floor(arr.length / 2);
   const pivot: number = arr[pivotIndex];
-
   const less: number[] = [];
   const greater: number[] = [];
 
-  for (let i: number = 0; i < arr.length; i++) {
+  for (let i = 0; i < arr.length; i++) {
     if (i === pivotIndex) continue;
 
     if (arr[i] < pivot) {
@@ -17,5 +16,5 @@ export const quickSort = (arr: number[]): number[] => {
     }
   }
 
-  return [...quickSort(less), pivot, ...quickSort(greater)];
+  return [ ...quickSort(less), pivot, ...quickSort(greater) ];
 };

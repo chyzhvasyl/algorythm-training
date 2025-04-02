@@ -1,4 +1,4 @@
-//You are given an array prices where prices[i] is the price of a given stock on the ith day.
+// You are given an array prices where prices[i] is the price of a given stock on the ith day.
 //
 // You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
 //
@@ -24,23 +24,14 @@
 // 1 <= prices.length <= 105
 // 0 <= prices[i] <= 104
 
-const arePricesInRange = (prices: number[]): boolean => {
-  return prices.every((price) => price <= Math.pow(10, 4) && price >= 0);
-};
-
-const isPricesLengthValid = (prices: number[]): boolean => {
-  return prices.length >= 1 && prices.length <= Math.pow(10, 5);
-};
-
-const isValid = (prices: number[]): boolean => {
-  return arePricesInRange(prices) && isPricesLengthValid(prices);
-};
+const arePricesInRange = (prices: number[]): boolean => prices.every((price) => price <= 10**4 && price >= 0);
+const isPricesLengthValid = (prices: number[]): boolean => prices.length >= 1 && prices.length <= 10**5;
+const isValid = (prices: number[]): boolean => arePricesInRange(prices) && isPricesLengthValid(prices);
 
 export const maxProfit1 = (prices: number[]): number | undefined => {
   if (!isValid(prices)) return;
 
   let result = 0;
-
   let minPrice = prices[0];
   let maxPrice = prices[0];
 

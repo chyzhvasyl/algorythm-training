@@ -1,4 +1,4 @@
-//Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.
+// Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.
 //
 //
 //
@@ -91,6 +91,7 @@ export const trap = (height: number[]): number => {
   // Do the same but in reverse direction, finding the right peak moving to the left.
   if (waterVolume > 0) {
     let rightMax = 0;
+
     for (let i = height.length - 1; i > startHeightIndex; i--) {
       if (height[i] > rightMax) {
         rightMax = height[i];

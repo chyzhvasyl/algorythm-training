@@ -9,7 +9,10 @@
     "nest-concepts:build": "nx build nest-concepts",
     "algorithm-training:run": "nx run algorithm-training:start",
     "lint:fix": "nx run-many --all --target=lint",
-    "format:write": "nx format:write --all --verbose"
+    "lint-algorythms:fix": "nx lint algorithm-training --fix",
+    "format:write": "nx format:write --all",
+    "nx:graph": "nx graph",
+    "nx:reset-cache": "nx reset"
   },
   "author": "vasyl chyzh",
   "license": "ISC",
@@ -39,6 +42,7 @@
     "@types/node": "~18.16.9",
     "@types/react": "18.3.1",
     "@types/react-dom": "18.3.0",
+    "@typescript-eslint/eslint-plugin": "^8.29.0",
     "@vitejs/plugin-react": "^4.2.0",
     "@vitest/coverage-v8": "^1.0.4",
     "@vitest/ui": "^1.3.1",
@@ -64,10 +68,9 @@
   },
   "nx": {},
   "dependencies": {
-    "@nestjs/common": "^10.0.2",
+    "@nestjs/common": "^10.4.15",
     "@nestjs/core": "^10.0.2",
     "@nestjs/platform-express": "^10.0.2",
-    "@typescript-eslint/eslint-plugin": "^8.16.0",
     "@typescript-eslint/parser": "^8.16.0",
     "axios": "^1.6.0",
     "eslint-config-airbnb": "^19.0.4",

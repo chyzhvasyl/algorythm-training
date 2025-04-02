@@ -1,4 +1,4 @@
-//Given a string s, find the first non-repeating character in it and return its index.ts. If it does not exist, return -1.
+// Given a string s, find the first non-repeating character in it and return its index.ts. If it does not exist, return -1.
 //
 //
 //
@@ -32,7 +32,7 @@ export const firstUniqChar = (s: string): number => {
 
   for (let i = 0; i < s.length; i++) {
     const char = s[i];
-    let charInMap = map[char];
+    const charInMap = map[char];
 
     if (charInMap?.duplicate) continue;
 

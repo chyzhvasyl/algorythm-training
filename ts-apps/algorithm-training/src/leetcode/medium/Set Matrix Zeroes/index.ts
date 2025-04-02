@@ -1,4 +1,4 @@
-//Given an m x n integer matrix matrix, if an element is 0, set its entire row and column to 0's.
+// Given an m x n integer matrix matrix, if an element is 0, set its entire row and column to 0's.
 //
 // You must do it in place.
 //
@@ -40,27 +40,22 @@ const nullifyColumn = (matrix: number[][], column: number): void => {
   });
 };
 
-const getRowsLength = (matrix: number[][]): number => {
-  return matrix.length;
-};
-
-const getColumnsLength = (matrix: number[][]): number => {
-  return matrix[0].length;
-};
+const getRowsLength = (matrix: number[][]): number => matrix.length;
+const getColumnsLength = (matrix: number[][]): number => matrix[0].length;
 
 export const setZeroes = (matrix: number[][]): void => {
   const maxSize = 200;
   const minSize = 1;
 
-  if (!(getColumnsLength(matrix) >= minSize && getColumnsLength(matrix) <= maxSize))
-    return;
+  if (!(getColumnsLength(matrix) >= minSize && getColumnsLength(matrix) <= maxSize)) return;
+
   if (!(getRowsLength(matrix) >= minSize && getRowsLength(matrix) <= maxSize)) return;
 
   const rows: number[] = [];
   const columns: number[] = [];
 
   matrix.forEach((row: number[], rowIndex: number): void => {
-    for (let columnIndex: number = 0; columnIndex < row.length; columnIndex++) {
+    for (let columnIndex = 0; columnIndex < row.length; columnIndex++) {
       if (row[columnIndex] === 0) {
         rows.push(rowIndex);
         columns.push(columnIndex);

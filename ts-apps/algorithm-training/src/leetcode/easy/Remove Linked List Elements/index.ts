@@ -12,6 +12,7 @@ export const removeElements = (head: ListNode | null, val: number): ListNode | n
 
   while (currentNode) {
     const ifCurrent: boolean = currentNode.val === val;
+
     const addNewNode = (currentHead: ListNode, newNode: ListNode): void => {
       if (currentHead.next) return addNewNode(currentHead.next, newNode);
 
@@ -36,4 +37,4 @@ export const removeElements = (head: ListNode | null, val: number): ListNode | n
   return newHead;
 };
 
-//Accepted
+// Accepted

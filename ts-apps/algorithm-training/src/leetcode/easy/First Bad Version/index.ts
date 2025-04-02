@@ -1,4 +1,4 @@
-//You are a product manager and currently leading a team to develop a new product. Unfortunately, the latest version of your product fails the quality check. Since each version is developed based on the previous version, all the versions after a bad version are also bad.
+// You are a product manager and currently leading a team to develop a new product. Unfortunately, the latest version of your product fails the quality check. Since each version is developed based on the previous version, all the versions after a bad version are also bad.
 //
 // Suppose you have n versions [1, 2, ..., n] and you want to find out the first bad one, which causes all the following ones to be bad.
 //
@@ -25,9 +25,8 @@
 //
 // 1 <= bad <= n <= 231 - 1
 
-//TODO use binary search
-export const solution = (isBadVersion: (n: number) => boolean): Function => {
-  return (version: number): number => {
+// TODO use binary search
+export const solution = (isBadVersion: (n: number) => boolean): Function => (version: number): number => {
     const fn = (left: number, right: number): number => {
       if (left === right) return left;
 
@@ -35,13 +34,12 @@ export const solution = (isBadVersion: (n: number) => boolean): Function => {
 
       if (isBadVersion(mid)) {
         return fn(left, mid);
-      } else {
-        return fn(mid + 1, right);
       }
+
+        return fn(mid + 1, right);
     };
 
     return fn(1, version);
   };
-};
 
-//Accepted
+// Accepted

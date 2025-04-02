@@ -1,4 +1,4 @@
-//Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
+// Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
 //
 // You must implement a solution with a linear runtime complexity and use only constant extra space.
 //
@@ -24,24 +24,21 @@
 // -3 * 104 <= nums[i] <= 3 * 104
 // Each element in the array appears twice except for one element which appears only once.
 
-const areWithinConstraints = (nums: number[] = []): boolean =>
-  nums.length > 0 &&
-  nums.length <= 3 * Math.pow(10, 4) &&
-  nums.every((num) => num >= -3 * Math.pow(10, 4) && num <= 3 * Math.pow(10, 4));
+const areWithinConstraints = (nums: number[] = []): boolean => nums.length > 0
+  && nums.length <= 3 * 10**4
+  && nums.every((num) => num >= -3 * 10**4 && num <= 3 * 10**4);
 
 export const singleNumber = (nums: number[] = []): number | void => {
   if (!areWithinConstraints(nums)) return;
 
   const sorted = nums.sort();
 
-  for (let i = 0; i < nums.length; ) {
+  for (let i = 0; i < nums.length;) {
     if (sorted[i] !== sorted[i + 1]) {
       return sorted[i];
-    } else {
-      i += 2;
     }
-  }
 
-  return;
+      i += 2;
+  }
 };
 // approved;

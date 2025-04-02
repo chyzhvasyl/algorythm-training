@@ -1,4 +1,4 @@
-//You are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0's.
+// You are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0's.
 //
 // Increment the large integer by one and return the resulting array of digits.
 //
@@ -34,13 +34,10 @@
 // digits does not contain any leading 0's.
 
 export const plusOne = (digits: number[]): number[] => {
-  const str = digits.reduce((prev: string, currentValue) => {
-    return prev.concat(currentValue.toString(10));
-  }, '');
-
+  const str = digits.reduce((prev: string, currentValue) => prev.concat(currentValue.toString(10)), '');
   const num = BigInt(str) + BigInt(1);
 
   return num.toString().split('').map(Number);
 };
 
-//Accepted
+// Accepted

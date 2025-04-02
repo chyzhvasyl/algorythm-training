@@ -1,4 +1,4 @@
-//There is a singly-linked list head and we want to delete a node node in it.
+// There is a singly-linked list head and we want to delete a node node in it.
 //
 // You are given the node to be deleted node. You will not be given access to the first node of head.
 //
@@ -41,6 +41,7 @@
 import { ListNode } from '../../../shared';
 
 const head = new ListNode(4);
+
 head.next = new ListNode(5);
 head.next.next = new ListNode(1);
 head.next.next.next = new ListNode(9);
@@ -49,10 +50,10 @@ export const deleteNode = (): number[] => {
   const deleteNode = (node: ListNode | null): void => {
     if (!node) return;
 
-    const next = node.next;
+    const { next } = node;
 
-    node.val = next?.val as number;
-    node.next = next?.next as ListNode;
+    node.val = next?.val;
+    node.next = next?.next;
   };
 
   deleteNode(head.next);
@@ -68,4 +69,4 @@ export const deleteNode = (): number[] => {
   return resp;
 };
 
-//Accepted
+// Accepted

@@ -1,4 +1,4 @@
-//You are climbing a staircase. It takes n steps to reach the top.
+// You are climbing a staircase. It takes n steps to reach the top.
 //
 // Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
 //
@@ -35,7 +35,8 @@ export const climbStairs = (stairsLength: number): number | void => {
   const computeFactorial = (n: number, memo: Record<string, number> = {}): number => {
     if (n === 0 || n === 1) {
       return 1;
-    } else {
+    }
+
       if (typeof memo[n] !== 'undefined') {
         return memo[n];
       }
@@ -43,42 +44,36 @@ export const climbStairs = (stairsLength: number): number | void => {
       memo[n] = n * computeFactorial(n - 1);
 
       return memo[n];
-    }
   };
 
   const computeCombinations = (combinations: number[][]): number => {
     const memo: Record<string, number> = {};
-
     let result = 0;
 
     for (let longSteps = 0; longSteps < combinations.length; longSteps++) {
       const comb = combinations[longSteps];
 
-      result +=
-        computeFactorial(comb.length, memo) /
-        (computeFactorial(comb.length - longSteps, memo) *
-          computeFactorial(longSteps, memo));
+      result
+        += computeFactorial(comb.length, memo)
+        / (computeFactorial(comb.length - longSteps, memo)
+          * computeFactorial(longSteps, memo));
     }
 
     return result;
   };
 
-  const computeLongSteps = (stairsLength: number) =>
-    stairsLength % longStep === 0 ? stairsLength / longStep : stairsLength / longStep - 1;
-
+  const computeLongSteps = (stairsLength: number) => (stairsLength % longStep === 0 ? stairsLength / longStep : stairsLength / longStep - 1);
   const isValid = (n: number) => n && n >= 1 && n <= 45;
 
   if (!isValid(stairsLength)) return;
 
   const longSteps = computeLongSteps(stairsLength);
-
   const defaultCombination = new Array(stairsLength).fill(shortStep);
-  const combinations: number[][] = [defaultCombination];
-
+  const combinations: number[][] = [ defaultCombination ];
   let currentCombination: number[] = [];
 
   for (let i = 0; i < longSteps; i++) {
-    currentCombination = [...combinations[combinations.length - 1]];
+    currentCombination = [ ...combinations[combinations.length - 1] ];
 
     currentCombination[i] = longStep;
     currentCombination.pop();

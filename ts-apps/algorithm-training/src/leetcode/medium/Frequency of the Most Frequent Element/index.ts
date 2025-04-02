@@ -1,4 +1,4 @@
-//The frequency of an element is the number of times it occurs in an array.
+// The frequency of an element is the number of times it occurs in an array.
 //
 // You are given an integer array nums and an integer k. In one operation, you can choose an index.ts of nums and increment the element at that index.ts by 1.
 //
@@ -32,39 +32,32 @@
 // 1 <= nums[i] <= 105
 // 1 <= k <= 105
 
-const canAlignPrevious = (diff: number, length: number, portion: number): boolean => {
-  return getDiffPortion(diff, length, portion) >= 0;
-};
-
-const getDiffPortion = (diff: number, length: number, portion: number): number => {
-  return portion - diff * length;
-};
+const canAlignPrevious = (diff: number, length: number, portion: number): boolean => getDiffPortion(diff, length, portion) >= 0;
+const getDiffPortion = (diff: number, length: number, portion: number): number => portion - diff * length;
 
 export const maxFrequency = (nums: number[], k: number): number => {
   nums.sort((a, b) => a - b);
 
-  let combination: number = 0;
-
+  let combination = 0;
   let count: number = k;
-  let result: number = 1;
+  let result = 1;
 
   const resetValues = (): void => {
     count = k;
     result = 1;
   };
 
-  for (let i: number = 0; i < nums.length - 1; i++) {
+  for (let i = 0; i < nums.length - 1; i++) {
     for (let j: number = i; j < nums.length - 1; j++) {
-      const _: number = nums[j],
-        next: number = nums[j + 1];
+      const _: number = nums[j];
+        const next: number = nums[j + 1];
       const diffNextAndCurrent: number = next - _;
       const leftLength: number = j - i;
-
-      let portion: number = count - diffNextAndCurrent;
+      const portion: number = count - diffNextAndCurrent;
 
       if (
-        diffNextAndCurrent <= count &&
-        canAlignPrevious(diffNextAndCurrent, leftLength, portion)
+        diffNextAndCurrent <= count
+        && canAlignPrevious(diffNextAndCurrent, leftLength, portion)
       ) {
         result++;
         count = getDiffPortion(diffNextAndCurrent, leftLength, portion);
@@ -90,10 +83,12 @@ export const maxFrequency2 = (nums: number[], k: number): number => {
 
   for (let right = 0; right < nums.length; right++) {
     sum += nums[right];
+
     while (nums[right] * (right - left + 1) > sum + k) {
       sum -= nums[left];
       left++;
     }
+
     maxCount = Math.max(maxCount, right - left + 1);
   }
 

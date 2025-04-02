@@ -24,17 +24,17 @@ export const removeNthFromEnd = (head: ListNode, n: number): ListNode | null => 
   const lastIndex = length - (n === 1 ? n : n - 1);
 
   for (let i = 0; i <= lastIndex; i++) {
-    const next = currentNode?.next as ListNode;
+    const next = currentNode?.next;
     const range = length - n;
 
     if (n === 1 && range - 1 === i) {
-      currentNode!.next = null;
+      currentNode.next = null;
       break;
     }
 
     if (range === i) {
-      currentNode!.val = next?.val as number;
-      currentNode!.next = next?.next as ListNode;
+      currentNode.val = next?.val;
+      currentNode.next = next?.next;
     }
 
     if (currentNode) {
@@ -45,4 +45,4 @@ export const removeNthFromEnd = (head: ListNode, n: number): ListNode | null => 
   return head;
 };
 
-//Accepted
+// Accepted

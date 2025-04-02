@@ -2,8 +2,7 @@ export const myBind = (
   fn: Function,
   context: Record<string, any>,
   ...args: unknown[]
-) => {
-  return (...rest: unknown[]) => {
+) => (...rest: unknown[]) => {
     const id = Symbol('CONTEXT ID') as unknown as string;
 
     context = {
@@ -17,4 +16,3 @@ export const myBind = (
 
     return result;
   };
-};

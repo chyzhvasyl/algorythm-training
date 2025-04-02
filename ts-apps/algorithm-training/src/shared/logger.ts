@@ -1,7 +1,7 @@
 export const logger = (func: Function, ...input: unknown[]): void => {
   console.log('--------------------------------------------------');
   console.log(`${func.name}`);
-  console.log(`input: ${JSON.stringify([...input])}`);
+  console.log(`input: ${JSON.stringify([ ...input ])}`);
 
   const result = func(...input);
 

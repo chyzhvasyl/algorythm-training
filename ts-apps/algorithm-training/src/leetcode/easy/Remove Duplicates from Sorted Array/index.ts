@@ -1,14 +1,6 @@
-const areNumbersInRange = (nums: number[]): boolean => {
-  return nums.some((num) => num <= 100 && num >= -100);
-};
-
-const isNumbersLengthValid = (nums: number[]): boolean => {
-  return nums.length >= 0 && nums.length <= 3 * Math.pow(10, 4);
-};
-
-const areWithinConstraints = (nums: number[]): boolean => {
-  return areNumbersInRange(nums) && isNumbersLengthValid(nums);
-};
+const areNumbersInRange = (nums: number[]): boolean => nums.some((num) => num <= 100 && num >= -100);
+const isNumbersLengthValid = (nums: number[]): boolean => nums.length >= 0 && nums.length <= 3 * 10**4;
+const areWithinConstraints = (nums: number[]): boolean => areNumbersInRange(nums) && isNumbersLengthValid(nums);
 
 export const removeDuplicates = (nums: number[] = []): number | undefined => {
   if (!areWithinConstraints(nums)) return;

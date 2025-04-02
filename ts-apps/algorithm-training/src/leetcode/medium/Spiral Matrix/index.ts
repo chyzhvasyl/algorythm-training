@@ -1,4 +1,4 @@
-//Given an m x n matrix, return all elements of the matrix in spiral order.
+// Given an m x n matrix, return all elements of the matrix in spiral order.
 //
 //
 //
@@ -30,14 +30,12 @@
 
 export const spiralOrder = (matrix: number[][]): number[] => {
   const resp: number[] = [];
-
-  let left: number = 0;
-  let top: number = 0;
+  let left = 0;
+  let top = 0;
   let right: number = matrix[0].length - 1;
   let bottom: number = matrix.length - 1;
-
-  let toRight: boolean = true;
-  let toBottom: boolean = true;
+  let toRight = true;
+  let toBottom = true;
 
   const iterateRow = (): void => {
     if (left > right) return;
@@ -88,6 +86,7 @@ export const spiralOrder = (matrix: number[][]): number[] => {
 
       left++;
     }
+
     toBottom = !toBottom;
 
     iterateRow();
@@ -98,4 +97,4 @@ export const spiralOrder = (matrix: number[][]): number[] => {
   return resp;
 };
 
-//Accepted
+// Accepted

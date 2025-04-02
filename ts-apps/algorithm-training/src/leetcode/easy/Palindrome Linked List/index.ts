@@ -1,4 +1,4 @@
-//Given the head of a singly linked list, return true if it is a palindrome or false otherwise.
+// Given the head of a singly linked list, return true if it is a palindrome or false otherwise.
 //
 //
 //
@@ -55,15 +55,15 @@ isPalindromeList.next.next.next = new ListNode(1);
 export const isPalindrome = (head: ListNode | null): boolean => {
   if (!head?.next) return true;
 
-  let list: number[] = [];
+  const list: number[] = [];
   let node = head;
 
   while (node) {
     list.push(node.val);
-    node = node.next as ListNode;
+    node = node.next;
   }
 
-  //two pointers
+  // two pointers
   for (let i = 0, j = list.length - 1; i < j; i++, j--) {
     if (list[i] !== list[j]) {
       return false;
@@ -75,7 +75,7 @@ export const isPalindrome = (head: ListNode | null): boolean => {
 
 // Accepted
 
-//O(n), O(1)
+// O(n), O(1)
 export const isPalindrome2 = (head: ListNode | null): boolean => {
   if (!head?.next) return true;
 
@@ -83,7 +83,7 @@ export const isPalindrome2 = (head: ListNode | null): boolean => {
   let node = head;
 
   while (node) {
-    node = node.next as ListNode;
+    node = node.next;
     length++;
   }
 
@@ -91,9 +91,10 @@ export const isPalindrome2 = (head: ListNode | null): boolean => {
 
   while (node) {
     if (true) {
-      //TODO implement comparing the first and last node;
+      // TODO implement comparing the first and last node;
     }
-    node = node.next as ListNode;
+
+    node = node.next;
   }
 
   return true;

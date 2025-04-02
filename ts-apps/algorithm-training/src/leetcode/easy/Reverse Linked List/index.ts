@@ -1,4 +1,4 @@
-//Given the head of a singly linked list, reverse the list, and return the reversed list.
+// Given the head of a singly linked list, reverse the list, and return the reversed list.
 //
 //
 //
@@ -42,8 +42,8 @@ export const reverseList = (head: ListNode | null): ListNode | null => {
   const reverseSiblings = (): void => {
     if (!currentNode?.next) return;
 
-    let next = currentNode.next;
-    let currVal = currentNode.val;
+    const { next } = currentNode;
+    const currVal = currentNode.val;
 
     currentNode.val = next?.val;
     next.val = currVal;
@@ -76,4 +76,4 @@ export const reverseList = (head: ListNode | null): ListNode | null => {
   return head;
 };
 
-//Accepted
+// Accepted

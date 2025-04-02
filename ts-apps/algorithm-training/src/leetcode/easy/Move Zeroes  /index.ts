@@ -1,4 +1,4 @@
-//Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
+// Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
 //
 // Note that you must do this in-place without making a copy of the array.
 //
@@ -23,7 +23,9 @@
 export const moveZeroes = (nums: number[]): void => {
   nums.sort((a, b): number => {
     if (a === 0) return 1; // Move zero to the end
+
     if (b === 0) return -1; // Keep non-zero elements in place
+
     return 0; // Maintain relative order of non-zero elements
   });
 };

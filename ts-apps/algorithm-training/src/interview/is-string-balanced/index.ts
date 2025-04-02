@@ -1,4 +1,4 @@
-export const isBalanced = (input: string = ''): boolean => {
+export const isBalanced = (input = ''): boolean => {
   if (!input) return true;
 
   const bracesMap: Record<string, string> = {
@@ -14,22 +14,10 @@ export const isBalanced = (input: string = ''): boolean => {
   };
 
   const bracesStack: string[] = [];
-
-  const getReversedBrace = (str: string = '') => {
-    return reversedBracesMap[str];
-  };
-
-  const getFirstReversedBraceFromStack = () => {
-    return bracesStack[bracesStack.length - 1];
-  };
-
-  const isBrace = (str: string = ''): boolean => {
-    return !!bracesMap[str];
-  };
-
-  const isReversedBrace = (str: string = ''): boolean => {
-    return !!getReversedBrace(str);
-  };
+  const getReversedBrace = (str = '') => reversedBracesMap[str];
+  const getFirstReversedBraceFromStack = () => bracesStack[bracesStack.length - 1];
+  const isBrace = (str = ''): boolean => !!bracesMap[str];
+  const isReversedBrace = (str = ''): boolean => !!getReversedBrace(str);
 
   const addBrace = (str = '') => {
     bracesStack.push(str);
@@ -39,11 +27,9 @@ export const isBalanced = (input: string = ''): boolean => {
     bracesStack.pop();
   };
 
-  const isStackEmpty = (): boolean => {
-    return !bracesStack.length;
-  };
+  const isStackEmpty = (): boolean => !bracesStack.length;
 
-  for (let str of input) {
+  for (const str of input) {
     if (!bracesStack.length && isReversedBrace(str)) return false;
 
     if (!isBrace(str) && !isReversedBrace(str)) continue;
@@ -54,9 +40,9 @@ export const isBalanced = (input: string = ''): boolean => {
 
     if (bracesMap[getFirstReversedBraceFromStack()] !== getReversedBrace(str)) {
       return false;
-    } else {
-      removeBrace();
     }
+
+      removeBrace();
   }
 
   return isStackEmpty();

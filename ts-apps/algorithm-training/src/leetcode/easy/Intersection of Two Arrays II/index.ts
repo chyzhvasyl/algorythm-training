@@ -1,4 +1,4 @@
-//Given two integer arrays nums1 and nums2, return an array of their intersection. Each element in the result must appear as many times as it shows in both arrays and you may return the result in any order.
+// Given two integer arrays nums1 and nums2, return an array of their intersection. Each element in the result must appear as many times as it shows in both arrays and you may return the result in any order.
 //
 //
 //
@@ -25,26 +25,22 @@
 // What if nums1's size is small compared to nums2's size? Which algorithm is better?
 // What if elements of nums2 are stored on disk, and the memory is limited such that you cannot load all elements into the memory at once?
 
-const isLengthValid = (arr: number[] = []): boolean => {
-  return arr.length > 0 && arr.length <= 1000;
-};
+const isLengthValid = (arr: number[] = []): boolean => arr.length > 0 && arr.length <= 1000;
+const isValueValid = (arr: number[] = []): boolean => arr.every((num: number) => num > -1 && num < 1000);
 
-const isValueValid = (arr: number[] = []): boolean => {
-  return arr.every((num: number) => num > -1 && num < 1000);
-};
-
-const areWithinConstraints = (nums1: number[] = [], nums2: number[] = []): boolean =>
-  isLengthValid(nums1) &&
-  isLengthValid(nums2) &&
-  isValueValid(nums1) &&
-  isValueValid(nums2);
+const areWithinConstraints = (nums1: number[] = [], nums2: number[] = []): boolean => isLengthValid(nums1)
+  && isLengthValid(nums2)
+  && isValueValid(nums1)
+  && isValueValid(nums2);
 
 export const intersect = (nums1: number[], nums2: number[]): number[] | void => {
   if (!areWithinConstraints(nums1, nums2)) return;
+
   const result: number[] = [];
 
   for (let aIndex = 0; aIndex < nums1.length; aIndex++) {
     const bIndex = nums2.findIndex((num2: number) => num2 === nums1[aIndex]);
+
     if (bIndex > -1) {
       result.push(nums1[aIndex]);
       nums1.splice(aIndex, 1);

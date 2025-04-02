@@ -12,9 +12,7 @@ export class ReverseMatrix {
     this._reversedMatrix = matrix;
   }
 
-  public rotateBy90 = (): ReverseMatrix => {
-    return this.rotate90();
-  };
+  public rotateBy90 = (): ReverseMatrix => this.rotate90();
 
   public get reversedMatrix(): number[][] {
     return this._reversedMatrix;
@@ -44,10 +42,11 @@ export class ReverseMatrix {
 }
 
 export const reverseMatrixBy90Deg = (matrix: number[][] = [], times = 1) => {
-  let reversedMatrix: number[][] = [...matrix];
+  let reversedMatrix: number[][] = [ ...matrix ];
 
   const reversBy90 = (reversed: number[][] = []) => {
     const _reversedMatrix: number[][] = [];
+
     for (let i = 0; i < reversed.length; i++) {
       const row = reversed[i];
 

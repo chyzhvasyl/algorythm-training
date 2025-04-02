@@ -1,4 +1,4 @@
-//A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
+// A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
 //
 // Given a string s, return true if it is a palindrome, or false otherwise.
 //
@@ -23,7 +23,6 @@
 
 export const isPalindrome = (s: string): boolean => {
   const getAlphanumeric = (s: string): string => s.replace(/[^a-zA-Z0-9]/g, '');
-
   const result: string = getAlphanumeric(s).toLowerCase();
 
   if (!result) return true;

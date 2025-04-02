@@ -15,11 +15,11 @@ export const hasCycle = (head: ListNode): boolean => {
   while (slow && fast) {
     if (slow === fast) return true;
 
-    slow = slow?.next!;
+    slow = slow?.next;
     fast = fast?.next?.next;
   }
 
   return false;
 };
 
-//Accepted
+// Accepted

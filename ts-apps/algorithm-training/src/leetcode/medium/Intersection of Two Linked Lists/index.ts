@@ -1,4 +1,4 @@
-//Given the heads of two singly linked-lists headA and headB, return the node at which the two lists intersect. If the two linked lists have no intersection at all, return null.
+// Given the heads of two singly linked-lists headA and headB, return the node at which the two lists intersect. If the two linked lists have no intersection at all, return null.
 //
 // For example, the following two linked lists begin to intersect at node c1:
 //
@@ -65,7 +65,6 @@ export const getIntersectionNode = (
   headB: ListNode | null,
 ): ListNode | null => {
   let currentNode: ListNode | null = headA;
-
   const visitedNodes: Set<ListNode> = new Set([]);
 
   while (currentNode) {
@@ -86,4 +85,4 @@ export const getIntersectionNode = (
   return null;
 };
 
-//Accepted
+// Accepted

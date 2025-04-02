@@ -10,11 +10,11 @@ export const tree: Tree = {
   children: [
     {
       value: 2,
-      children: [{ value: 4 }, { value: 5 }],
+      children: [ { value: 4 }, { value: 5 } ],
     },
     {
       value: 3,
-      children: [{ value: 6 }, { value: 7 }],
+      children: [ { value: 6 }, { value: 7 } ],
     },
   ],
 };
@@ -27,6 +27,7 @@ function hasListEvenLength(list: number[] = []): boolean {
 
 function getMedian(list: number[] = []): number {
   if (list.length === 1) return list[0];
+
   return hasListEvenLength(list)
     ? (list[list.length / 2 - 1] + list[list.length / 2]) / 2
     : list[Math.floor(list.length / 2)];
@@ -39,15 +40,15 @@ function flattenTreeValues(prev: number[], current: Tree): number[] {
 
   if (!current.children) {
     return prev;
-  } else {
-    return current.children.reduce(flattenTreeValues, prev);
   }
+
+    return current.children.reduce(flattenTreeValues, prev);
 }
 
 function getFlattedValues(tree: Tree): number[] {
-  if (!tree.children) return [tree.value];
+  if (!tree.children) return [ tree.value ];
 
-  return tree.children?.reduce(flattenTreeValues, [tree.value]);
+  return tree.children?.reduce(flattenTreeValues, [ tree.value ]);
 }
 
 export function findMedian1(tree: Tree): number {
@@ -59,7 +60,7 @@ export function findMedian1(tree: Tree): number {
     }
 
     if (tree.children?.length) {
-      for (let subTree of tree.children) {
+      for (const subTree of tree.children) {
         setTreeValues(subTree);
       }
     }

@@ -1,4 +1,4 @@
-//Design your implementation of the linked list. You can choose to use a singly or doubly linked list.
+// Design your implementation of the linked list. You can choose to use a singly or doubly linked list.
 // A node in a singly linked list should have two attributes: val and next. val is the value of the current node, and next is a pointer/reference to the next node.
 // If you want to use the doubly linked list, you will need one more attribute prev to indicate the previous node in the linked list. Assume all nodes in the linked list are 0-indexed.
 //
@@ -48,6 +48,7 @@ export class MyLinkedList {
 
     for (let i = 0; i <= index; i++) {
       if (!node) return -1;
+
       if (i === index) return node?.val ?? -1;
 
       node = node.next;
@@ -112,7 +113,7 @@ export class MyLinkedList {
       if (!node) return;
 
       if (i + 1 === index) {
-        node.next = node.next?.next!;
+        node.next = node.next?.next;
 
         if (!node.next?.prev) continue;
 
@@ -130,7 +131,7 @@ export class MyLinkedList {
       node = node.next;
     }
 
-    return node!;
+    return node;
   }
 
   private getHead(): MyLinkedList {
@@ -142,14 +143,15 @@ export class MyLinkedList {
   }
 
   private deleteHead(): void {
-    this.val = this.next?.val!;
-    this.next = this.next?.next!;
+    this.val = this.next?.val;
+    this.next = this.next?.next;
     this.prev = null;
   }
 }
 
 export const getMyLinkedList2 = (): MyLinkedList => {
   const myLinkedList = new MyLinkedList();
+
   myLinkedList.addAtHead(1);
   myLinkedList.addAtTail(3);
   myLinkedList.addAtIndex(1, 2); // linked list becomes 1->2->3
@@ -157,7 +159,7 @@ export const getMyLinkedList2 = (): MyLinkedList => {
   myLinkedList.deleteAtIndex(1); // now the linked list is 1->3
   myLinkedList.get(1);
 
-  return myLinkedList.next as MyLinkedList;
+  return myLinkedList.next;
 };
 
-//Accepted
+// Accepted

@@ -1,4 +1,4 @@
-//function add() {
+// function add() {
 //   // todo
 // }
 //

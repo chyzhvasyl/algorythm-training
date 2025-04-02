@@ -1,4 +1,4 @@
-//You have n  tiles, where each tile has one letter tiles[i] printed on it.
+// You have n  tiles, where each tile has one letter tiles[i] printed on it.
 //
 // Return the number of possible non-empty sequences of letters you can make using the letters printed on those tiles.
 //
@@ -33,10 +33,10 @@ const getFactorial = (n: number, cache: number[] = []): number => {
 };
 
 const getSubSum = (length: number, table: Record<string, number>): number => {
-  let sum = 0;
+  const sum = 0;
 
   // @ts-ignore
-  for (const [key, value] of Object.entries(table)) {
+  for (const [ key, value ] of Object.entries(table)) {
     if (value <= length) {
       // sum =+ getFactorial(length)/
     }
@@ -47,22 +47,20 @@ const getSubSum = (length: number, table: Record<string, number>): number => {
 
 export const numTilePossibilities = (tiles: string[]): number => {
   const cachedCombinations: number[] = [];
-
   const allTiles = tiles.length;
   // @ts-ignore
   const allReplacent = getFactorial(allTiles, cachedCombinations);
-  const tilesCount = tiles.reduce<Record<string, number>>((prev, curr: string) => {
-    return {
+
+  const tilesCount = tiles.reduce<Record<string, number>>((prev, curr: string) => ({
       ...prev,
       curr: prev[curr] ? prev[curr] + 1 : 1,
-    };
-  }, {});
-  const uniqueTiles = Object.keys(tiles).length;
+    }), {});
 
+  const uniqueTiles = Object.keys(tiles).length;
   let result = 0;
 
   for (let length = 1; length <= uniqueTiles; length++) {
-    //calculate
+    // calculate
     // length 1
     // (A - 1 times) + (B 1 times)) = 2 combinations = 1!/(1!⋅0!) + 1!/(0!⋅1!)
     // length 2

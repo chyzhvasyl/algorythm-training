@@ -1,4 +1,4 @@
-//Given an array, rotate the array to the right by k steps, where k is non-negative.
+// Given an array, rotate the array to the right by k steps, where k is non-negative.
 //
 //
 //
@@ -25,19 +25,19 @@
 // -231 <= nums[i] <= 231 - 1
 // 0 <= k <= 105
 
-const areWithinConstraints = (nums: number[], k: number): boolean =>
-  nums.length > 0 &&
-  nums.length <= Math.pow(10, 5) &&
-  nums.some((num) => num >= Math.pow(-2, 31) && num <= Math.pow(2, 31) - 1) &&
-  k > -1 &&
-  k <= Math.pow(10, 5) &&
-  (k > nums.length || k < nums.length);
+const areWithinConstraints = (nums: number[], k: number): boolean => nums.length > 0
+  && nums.length <= 10**5
+  && nums.some((num) => num >= (-2)**31 && num <= 2**31 - 1)
+  && k > -1
+  && k <= 10**5
+  && (k > nums.length || k < nums.length);
 
 export const rotate = (nums: number[] = [], k: number): void => {
   if (!areWithinConstraints(nums, k)) return;
 
   for (let i = 0; i < k; i++) {
     const last = nums[nums.length - 1];
+
     nums.pop();
     nums.unshift(last);
   }

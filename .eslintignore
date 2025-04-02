@@ -1,6 +1,5 @@
 .nx
 dist
-*dist
 node_modules
 *.d.ts
 *.mjs

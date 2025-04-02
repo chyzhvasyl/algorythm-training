@@ -1,4 +1,4 @@
-//Write a function to find the longest common prefix string amongst an array of strings.
+// Write a function to find the longest common prefix string amongst an array of strings.
 //
 // If there is no common prefix, return an empty string "".
 //
@@ -23,9 +23,10 @@
 
 export const longestCommonPrefix = (strs: string[]): string => {
   if (!strs.length) return '';
+
   if (strs.length === 1) return strs[0];
 
-  const getPrefix = (prefix: string = '', length: number): string => {
+  const getPrefix = (prefix = '', length: number): string => {
     if (!prefix) return '';
 
     for (let i = 1; i < strs.length; i++) {
@@ -46,4 +47,4 @@ export const longestCommonPrefix = (strs: string[]): string => {
   return getPrefix(strs[0][0], 1);
 };
 
-//Accepted
+// Accepted
