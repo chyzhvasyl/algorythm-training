@@ -1,5 +1,5 @@
 {
-  "name": "algorythm-training-root",
+  "name": "js-playground",
   "version": "1.0.0",
   "scripts": {
     "react-concepts:serve": "nx serve react-concepts",
