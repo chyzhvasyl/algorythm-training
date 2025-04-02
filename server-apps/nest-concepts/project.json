@@ -1,0 +1,58 @@
+{
+  "name": "nest-concepts",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "server-apps/nest-concepts/src",
+  "projectType": "application",
+  "root": "server-apps/nest-concepts",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "dependsOn": ["build"],
+      "watch": true,
+      "options": {
+        "buildTarget": "nest-concepts:build",
+        "runBuildTargetDependencies": false
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "nest-concepts:build:development"
+        },
+        "production": {
+          "buildTarget": "nest-concepts:build:production"
+        }
+      }
+    },
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "development",
+      "options": {
+        "target": "node",
+        "compiler": "tsc",
+        "outputPath": "dist/server-apps/nest-concepts",
+        "main": "server-apps/nest-concepts/src/main.ts",
+        "assets": ["server-apps/nest-concepts/src/assets"],
+        "webpackConfig": "server-apps/nest-concepts/webpack.config.js"
+      },
+      "configurations": {
+        "development": {
+          "outputPath": "dist/server-apps/nest-concepts"
+        },
+        "production": {
+          "outputPath": "dist/server-apps/nest-concepts"
+        }
+      }
+    },
+    "serve-hmr": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "server-apps/nest-concepts",
+        "commands": [
+          "nest build --webpack --webpackPath webpack-hmr.config.js --watch"
+        ]
+      }
+    }
+  }
+}
