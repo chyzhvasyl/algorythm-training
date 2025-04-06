@@ -10,11 +10,11 @@ export const tree: Tree = {
   children: [
     {
       value: 2,
-      children: [ { value: 4 }, { value: 5 } ],
+      children: [{ value: 4 }, { value: 5 }],
     },
     {
       value: 3,
-      children: [ { value: 6 }, { value: 7 } ],
+      children: [{ value: 6 }, { value: 7 }],
     },
   ],
 };
@@ -46,9 +46,9 @@ function flattenTreeValues(prev: number[], current: Tree): number[] {
 }
 
 function getFlattedValues(tree: Tree): number[] {
-  if (!tree.children) return [ tree.value ];
+  if (!tree.children) return [tree.value];
 
-  return tree.children?.reduce(flattenTreeValues, [ tree.value ]);
+  return tree.children?.reduce(flattenTreeValues, [tree.value]);
 }
 
 export function findMedian1(tree: Tree): number {

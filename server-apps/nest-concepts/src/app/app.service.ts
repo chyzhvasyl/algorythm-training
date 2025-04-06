@@ -3,8 +3,7 @@ import { REQUEST } from '@nestjs/core';
 
 @Injectable()
 export class AppService {
-  constructor() {
-  }
+  constructor() {}
 
   getData(): { message: string } {
     return { message: 'Hello API!' };

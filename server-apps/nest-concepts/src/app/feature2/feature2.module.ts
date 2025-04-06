@@ -13,7 +13,7 @@ export class Feature2Service {
 }
 
 @Module({
-  providers: [ Feature2Service ],
-  exports: [ Feature2Service ],
+  providers: [Feature2Service],
+  exports: [Feature2Service],
 })
 export class Feature2Module {}

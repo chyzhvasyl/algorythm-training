@@ -7,23 +7,19 @@ import { LoggerMiddleware } from './middleware';
 import { APP_GUARD } from '@nestjs/core';
 
 @Module({
-  imports: [
-    Feature1Module,
-    Feature2Module,
-  ],
-  controllers: [ AppController ],
-  providers: [ AppService,
+  imports: [Feature1Module, Feature2Module],
+  controllers: [AppController],
+  providers: [
+    AppService,
     {
       provide: APP_GUARD,
       useClass: class {},
-      inject: []
+      inject: [],
     },
   ],
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
-    consumer
-      .apply(LoggerMiddleware)
-      .forRoutes('*');
+    consumer.apply(LoggerMiddleware).forRoutes('*');
   }
 }

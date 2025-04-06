@@ -9,14 +9,12 @@ export class Feature1Service {
 }
 
 @Module({
-  providers: [ Feature1Service ],
-  exports: [ Feature1Service ],
+  providers: [Feature1Service],
+  exports: [Feature1Service],
   imports: [Feature2Module],
 })
 export class Feature1Module {
-  constructor(
-    private readonly feature2: Feature2Service,
-  ) {
-    console.log('feature2', feature2)
+  constructor(private readonly feature2: Feature2Service) {
+    console.log('feature2', feature2);
   }
 }

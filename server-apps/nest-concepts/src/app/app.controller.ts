@@ -10,8 +10,8 @@ export class AppController {
     private readonly feature1: Feature1Service,
     private readonly feature2: Feature2Service,
   ) {
-    console.log('AppController feature1', feature1)
-    console.log('AppController feature2', feature2)
+    console.log('AppController feature1', feature1);
+    console.log('AppController feature2', feature2);
   }
 
   @Get()
