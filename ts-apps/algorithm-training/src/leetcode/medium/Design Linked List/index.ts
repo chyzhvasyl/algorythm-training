@@ -106,7 +106,7 @@ export class MyLinkedList {
       if (!node) return;
 
       if (i + 1 === index) {
-        node.next = node.next?.next;
+        node!.next = node.next?.next as MyLinkedList;
       }
 
       node = node.next;
@@ -133,7 +133,7 @@ export class MyLinkedList {
 
   private deleteHead(): void {
     this.val = this.next?.val;
-    this.next = this.next?.next;
+    this.next = this.next?.next as MyLinkedList;
   }
 }
 

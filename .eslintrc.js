@@ -11,10 +11,11 @@ module.exports = {
     'import',
   ],
   extends: [
-    // 'airbnb',
-    // 'airbnb-typescript',
-    // 'airbnb/hooks',
-    // use @typescript-eslint/eslint-plugin@7.x @typescript-eslint/parser@7.x
+    //
+    'airbnb',
+    'airbnb-typescript',
+    'airbnb/hooks',
+    // use @typescript-eslint/eslint-plugin@7.x @typescript-eslint/parser@7.x, otherwise install the latest
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
   ],

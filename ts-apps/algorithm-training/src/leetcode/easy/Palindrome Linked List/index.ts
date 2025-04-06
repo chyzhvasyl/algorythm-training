@@ -60,7 +60,7 @@ export const isPalindrome = (head: ListNode | null): boolean => {
 
   while (node) {
     list.push(node.val);
-    node = node.next;
+    node = node.next as ListNode;
   }
 
   // two pointers
@@ -83,18 +83,16 @@ export const isPalindrome2 = (head: ListNode | null): boolean => {
   let node = head;
 
   while (node) {
-    node = node.next;
+    node = node.next as ListNode;
     length++;
   }
 
   node = head;
 
   while (node) {
-    if (true) {
-      // TODO implement comparing the first and last node;
-    }
+    // TODO implement comparing the first and last node;
 
-    node = node.next;
+    node = node.next as ListNode;
   }
 
   return true;
