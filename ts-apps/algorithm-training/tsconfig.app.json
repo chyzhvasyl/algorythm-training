@@ -5,11 +5,15 @@
     "moduleResolution": "NodeNext",
     "module": "NodeNext",
     "types": ["node"],
+    "rootDir": ".",
     "emitDecoratorMetadata": true,
     "emitDeclarationOnly": false,
     "declaration": true,
     "target": "es2021",
-    "noEmit": false
+    "noEmit": false,
+    "paths": {
+      "@app/shared": ["src/shared"]
+    }
   },
   "include": ["src/**/*.ts"],
   "exclude": ["jest.config.ts", "src/**/*.spec.ts"]
