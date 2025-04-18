@@ -8,7 +8,8 @@ import { cycledLinkedList2, detectCycle } from './Linked List Cycle 2';
 import { setZeroes } from './Set Matrix Zeroes';
 // import {getIntersectionNode} from "./Intersection of Two Linked Lists";
 import { spiralOrder } from './Spiral Matrix';
-import { addTwoNumbers } from './Add Two Numbers';
+// import { addTwoNumbers } from './Add Two Numbers';
+import { rotateRight } from './Rotate List';
 
 export const main = (): void => {
   logger(setZeroes, [[0, 1]]);
@@ -41,5 +42,12 @@ export const main = (): void => {
   list2.next = new ListNode(6);
   list2.next.next = new ListNode(4);
 
-  logger(addTwoNumbers, [list1, list2]);
+  // logger(addTwoNumbers, [list1, list2]);
+
+  const rotateRightList = new ListNode(1);
+
+  rotateRightList.next = new ListNode(2);
+  rotateRightList.next.next = new ListNode(3);
+
+  logger(rotateRight, rotateRightList, 3);
 };
