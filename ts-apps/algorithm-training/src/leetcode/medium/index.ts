@@ -10,6 +10,7 @@ import { setZeroes } from './Set Matrix Zeroes';
 import { spiralOrder } from './Spiral Matrix';
 // import { addTwoNumbers } from './Add Two Numbers';
 import { rotateRight } from './Rotate List';
+import { flatten } from './Flatten a Multilevel Doubly Linked List';
 
 export const main = (): void => {
   logger(setZeroes, [[0, 1]]);
@@ -50,4 +51,6 @@ export const main = (): void => {
   rotateRightList.next.next = new ListNode(3);
 
   logger(rotateRight, rotateRightList, 3);
+
+  logger(flatten);
 };
