@@ -46,6 +46,7 @@ import { isAnagram } from './Valid Anagram';
 import { isPalindrome } from './Valid Palindrome';
 import { isValidSudoku } from './Valid Sudoku';
 import { searchInsert } from './Search Insert Position';
+import { lengthOfLastWord } from './Length of Last Word';
 
 export const main = (): void => {
   logger(removeDuplicates, [1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2]);
@@ -136,4 +137,6 @@ export const main = (): void => {
   console.log('removeElements', removeElements(removeElementsLinkedList, 1));
 
   logger(searchInsert, [1, 3, 5, 6], 5);
+
+  logger(lengthOfLastWord, 'luffy is still joyboy');
 };

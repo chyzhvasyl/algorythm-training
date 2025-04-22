@@ -100,3 +100,22 @@ export const lengthOfLongestSubstring = (s: string): number => {
 };
 
 // accepted
+
+export const lengthOfLongestSubstring2 = (s: string): number => {
+  const seen: Record<string, number> = {};
+  let maxLen = 0;
+  let start = 0;
+
+  for (let end = 0; end < s.length; end++) {
+    const char = s[end];
+
+    if (seen[char] !== undefined && seen[char] >= start) {
+      start = seen[char] + 1; // jump start past duplicate
+    }
+
+    seen[char] = end;
+    maxLen = Math.max(maxLen, end - start + 1);
+  }
+
+  return maxLen;
+};
