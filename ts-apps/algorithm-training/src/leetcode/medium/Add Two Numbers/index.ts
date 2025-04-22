@@ -33,7 +33,7 @@ export const getListNum = (list: ListNode): bigint => {
   }
 
   return BigInt(
-    num.reverse().reduce((prev: string, curr: number) => prev.concat(`${curr}`), ''),
+    num.reverse().reduce((prev: string, curr = 0) => prev.concat(`${curr}`), ''),
   );
 };
 

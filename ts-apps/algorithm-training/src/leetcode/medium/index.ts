@@ -1,36 +1,37 @@
 import { ListNode, logger } from '../../shared';
 
+import { addTwoNumbers } from './Add Two Numbers';
 import { getMyLinkedList } from './Design Linked List';
 import { getMyLinkedList2 } from './Doubly Linked List';
+import { flatten } from './Flatten a Multilevel Doubly Linked List';
 import { maxFrequency2 } from './Frequency of the Most Frequent Element';
 import { cycledLinkedList, hasCycle } from './Linked List Cycle';
-import { cycledLinkedList2, detectCycle } from './Linked List Cycle 2';
-import { setZeroes } from './Set Matrix Zeroes';
-// import {getIntersectionNode} from "./Intersection of Two Linked Lists";
-import { spiralOrder } from './Spiral Matrix';
-// import { addTwoNumbers } from './Add Two Numbers';
+// import { cycledLinkedList2 } from './Linked List Cycle 2';
+import { lengthOfLongestSubstring } from './Longest Substring Without Repeating Characters';
 import { rotateRight } from './Rotate List';
-import { flatten } from './Flatten a Multilevel Doubly Linked List';
+import { setZeroes } from './Set Matrix Zeroes';
+import { spiralOrder } from './Spiral Matrix';
+// import { getIntersectionNode } from './Intersection of Two Linked Lists';
 
 export const main = (): void => {
-  logger(setZeroes, [[0, 1]]);
+  logger(setZeroes, [[ 0, 1 ]]);
 
-  logger(maxFrequency2, [1, 2, 3], 1);
+  logger(maxFrequency2, [ 1, 2, 3 ], 1);
 
   logger(getMyLinkedList);
 
-  console.log('hasCycle---', hasCycle(cycledLinkedList));
+  logger(hasCycle, cycledLinkedList);
 
-  console.log('detectCycle---', detectCycle(cycledLinkedList2));
+  // logger(detectCycle, cycledLinkedList2);
 
-  // console.log('getIntersectionNode---', getIntersectionNode(cycledLinkedList, cycledLinkedList2));
+  // logger(getIntersectionNode, cycledLinkedList, cycledLinkedList2);
 
   logger(spiralOrder, [
-    [1, 2, 3],
-    [4, 5, 6],
+    [ 1, 2, 3 ],
+    [ 4, 5, 6 ],
   ]);
 
-  console.log('getMyLinkedList2', getMyLinkedList2());
+  logger(getMyLinkedList2);
 
   const list1 = new ListNode(1);
 
@@ -40,10 +41,11 @@ export const main = (): void => {
   list1.next.next.next.next = new ListNode(1);
 
   const list2 = new ListNode(5);
+
   list2.next = new ListNode(6);
   list2.next.next = new ListNode(4);
 
-  // logger(addTwoNumbers, [list1, list2]);
+  logger(addTwoNumbers, [ list1, list2 ]);
 
   const rotateRightList = new ListNode(1);
 
@@ -53,4 +55,6 @@ export const main = (): void => {
   logger(rotateRight, rotateRightList, 3);
 
   logger(flatten);
+
+  logger(lengthOfLongestSubstring, 'dvdf');
 };
