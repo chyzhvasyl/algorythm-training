@@ -47,6 +47,7 @@ import { isPalindrome } from './Valid Palindrome';
 import { isValidSudoku } from './Valid Sudoku';
 import { searchInsert } from './Search Insert Position';
 import { lengthOfLastWord } from './Length of Last Word';
+import { mySqrt } from './Sqrt(x)';
 
 export const main = (): void => {
   logger(removeDuplicates, [1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2]);
@@ -139,4 +140,6 @@ export const main = (): void => {
   logger(searchInsert, [1, 3, 5, 6], 5);
 
   logger(lengthOfLastWord, 'luffy is still joyboy');
+
+  logger(mySqrt, 900);
 };

@@ -34,3 +34,5 @@ export const lengthOfLastWord = (s: string): number => {
 
   return lastWord.length;
 };
+
+// accepted
