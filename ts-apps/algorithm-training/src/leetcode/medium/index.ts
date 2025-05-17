@@ -14,9 +14,9 @@ import { spiralOrder } from './Spiral Matrix';
 // import { getIntersectionNode } from './Intersection of Two Linked Lists';
 
 export const main = (): void => {
-  logger(setZeroes, [[ 0, 1 ]]);
+  logger(setZeroes, [[0, 1]]);
 
-  logger(maxFrequency2, [ 1, 2, 3 ], 1);
+  logger(maxFrequency2, [1, 2, 3], 1);
 
   logger(getMyLinkedList);
 
@@ -27,8 +27,8 @@ export const main = (): void => {
   // logger(getIntersectionNode, cycledLinkedList, cycledLinkedList2);
 
   logger(spiralOrder, [
-    [ 1, 2, 3 ],
-    [ 4, 5, 6 ],
+    [1, 2, 3],
+    [4, 5, 6],
   ]);
 
   logger(getMyLinkedList2);
@@ -45,7 +45,7 @@ export const main = (): void => {
   list2.next = new ListNode(6);
   list2.next.next = new ListNode(4);
 
-  logger(addTwoNumbers, [ list1, list2 ]);
+  logger(addTwoNumbers, [list1, list2]);
 
   const rotateRightList = new ListNode(1);
 

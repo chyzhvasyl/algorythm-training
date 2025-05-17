@@ -68,7 +68,7 @@ export const preorderTraversal = (root: TreeNode | null): number[] => {
   // recursiveTraversal(root);
 
   const iterativeTraversal = (node: TreeNode): void => {
-    const stack: TreeNode[] = [ node ];
+    const stack: TreeNode[] = [node];
 
     while (stack.length) {
       const firstNode = stack.pop()!;
